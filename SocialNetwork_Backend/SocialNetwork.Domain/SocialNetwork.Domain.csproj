@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
+</Project>
