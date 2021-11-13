@@ -39,3 +39,7 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\obj
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.genruntimeconfig.cache
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\MediatR.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb

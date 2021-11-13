@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tkNIOYzEe7J5Sd+jdk97QajKz4ps/ZnhX0C4/uuKcCde1mPZp9SuCUyB3KOzTF2LJJRe/mB2zSndpZ0acMVXUA==",
+  "dgSpecHash": "oijSF8B+FivaKP8EW+fqlEehH0CHhI093iGsF+l/ZvvleOnqvtmKKEPtOrPOTOV0pSajI7+a28Wi4hsopTFJMA==",
   "success": true,
   "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Data\\SocialNetwork.Data.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
