@@ -1,0 +1,15 @@
+﻿USE [Social_Network_DB]
+GO
+
+CREATE TABLE [dbo].[FriendRequest]
+(
+	ID			UNIQUEIDENTIFIER	NOT NULL PRIMARY KEY,
+	SenderID	UNIQUEIDENTIFIER	NOT NULL,
+	ReceiverID	UNIQUEIDENTIFIER	NOT NULL,
+	FriendRequestStatus	TINYINT		NOT NULL,
+	IsDeleted			BIT			NOT NULL,
+	CreatedDate			DATETIME	NOT NULL,
+	ModifiedDate		DATETIME	NOT NULL,
+	CONSTRAINT FK_UserSend FOREIGN KEY (SenderID) REFERENCES [dbo].[User](ID),
+	CONSTRAINT FK_UserReceive FOREIGN KEY (ReceiverID) REFERENCES [dbo].[User](ID)
+)

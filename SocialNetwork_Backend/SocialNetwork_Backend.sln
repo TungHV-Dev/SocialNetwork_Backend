@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Common", "SocialNetwork.Common\SocialNetwork.Common.csproj", "{AED3BE12-92AC-4139-ACFB-885A853AFDA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Common", "SocialNetwork.Common\SocialNetwork.Common.csproj", "{AED3BE12-92AC-4139-ACFB-885A853AFDA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Data", "SocialNetwork.Data\SocialNetwork.Data.csproj", "{D4AECFE2-FBD7-4E48-A9DC-1092CCE63774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Data", "SocialNetwork.Data\SocialNetwork.Data.csproj", "{D4AECFE2-FBD7-4E48-A9DC-1092CCE63774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Domain", "SocialNetwork.Domain\SocialNetwork.Domain.csproj", "{2D928B17-296E-42DA-84FF-0D7EFC744BB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Domain", "SocialNetwork.Domain\SocialNetwork.Domain.csproj", "{2D928B17-296E-42DA-84FF-0D7EFC744BB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Repository", "SocialNetwork.Repository\SocialNetwork.Repository.csproj", "{D6965B66-8E92-401A-A473-AE45D1BA5F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Repository", "SocialNetwork.Repository\SocialNetwork.Repository.csproj", "{D6965B66-8E92-401A-A473-AE45D1BA5F5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.API", "SocialNetwork.API\SocialNetwork.API.csproj", "{29D7DAA2-3548-4160-8E79-680A422BFA69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.API", "SocialNetwork.API\SocialNetwork.API.csproj", "{29D7DAA2-3548-4160-8E79-680A422BFA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Database", "SocialNetwork.Database\SocialNetwork.Database.csproj", "{39CB51EF-3151-4AB5-93DF-D82778279A34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
