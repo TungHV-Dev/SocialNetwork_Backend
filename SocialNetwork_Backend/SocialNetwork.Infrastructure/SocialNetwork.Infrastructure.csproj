@@ -5,12 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Database\InitData\" />
-    <Folder Include="Database\StoreProcedures\" />
-    <Folder Include="DbFactory\" />
+    <Folder Include="SQL\InitData\" />
+    <Folder Include="SQL\StoreProcedures\" />
     <Folder Include="Repositories\Interfaces\" />
     <Folder Include="Repositories\Implementations\" />
-    <Folder Include="Repositories\Mapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialNetwork.Common\SocialNetwork.Common.csproj" />
   </ItemGroup>
 
 </Project>

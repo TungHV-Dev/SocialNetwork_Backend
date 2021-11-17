@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using SocialNetwork.API.Configurations;
+using SocialNetwork.Common.Configurations;
 using SocialNetwork.Core.Mapping;
 using SocialNetwork.Core.Validations;
 
@@ -29,9 +30,16 @@ namespace SocialNetwork.API
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
 
+            // Add setting options
+            AppSetting.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.Configure<JWTSetting>(Configuration.GetSection("JWTSetting"));
+            services.Configure<PaginationSetting>(Configuration.GetSection("PaginationSetting"));
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(ModelMapping).Assembly);
+
+            // Add Repositories
+            services.RegisterRepositories();
 
             // Add FluentValidation
             services.RegisterModelValidation();

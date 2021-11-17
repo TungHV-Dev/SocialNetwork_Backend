@@ -40,4 +40,8 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SocialNetwork.Infrastructure\SocialNetwork.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
