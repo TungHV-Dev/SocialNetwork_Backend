@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Common", "Soc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.API", "SocialNetwork.API\SocialNetwork.API.csproj", "{29D7DAA2-3548-4160-8E79-680A422BFA69}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Database", "SocialNetwork.Database\SocialNetwork.Database.csproj", "{39CB51EF-3151-4AB5-93DF-D82778279A34}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Infrastructure", "SocialNetwork.Infrastructure\SocialNetwork.Infrastructure.csproj", "{9ACD8180-5B49-49FF-A659-BCDDDCD22DA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Core", "SocialNetwork.Core\SocialNetwork.Core.csproj", "{B7416E07-EA5D-43AE-9EA8-A6759DD99854}"
@@ -27,10 +25,6 @@ Global
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D7DAA2-3548-4160-8E79-680A422BFA69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39CB51EF-3151-4AB5-93DF-D82778279A34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9ACD8180-5B49-49FF-A659-BCDDDCD22DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9ACD8180-5B49-49FF-A659-BCDDDCD22DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ACD8180-5B49-49FF-A659-BCDDDCD22DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU

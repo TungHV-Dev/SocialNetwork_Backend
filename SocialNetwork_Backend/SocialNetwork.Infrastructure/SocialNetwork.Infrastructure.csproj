@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Database\InitData\" />
+    <Folder Include="Database\StoreProcedures\" />
     <Folder Include="DbFactory\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
