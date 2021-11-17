@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using SocialNetwork.API.Configurations;
+using SocialNetwork.Core.Mapping;
+using SocialNetwork.Core.Validations;
 
 namespace SocialNetwork.API
 {
@@ -26,6 +28,13 @@ namespace SocialNetwork.API
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
+
+
+            // Add AutoMapper
+            services.AddAutoMapper(typeof(ModelMapping).Assembly);
+
+            // Add FluentValidation
+            services.RegisterModelValidation();
 
             // Add Swagger
             services.ConfigureSwagger();

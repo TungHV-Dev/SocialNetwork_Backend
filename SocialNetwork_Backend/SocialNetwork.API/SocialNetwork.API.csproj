@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SocialNetwork.Common\SocialNetwork.Common.csproj" />
+    <ProjectReference Include="..\SocialNetwork.Core\SocialNetwork.Core.csproj" />
   </ItemGroup>
 
 
