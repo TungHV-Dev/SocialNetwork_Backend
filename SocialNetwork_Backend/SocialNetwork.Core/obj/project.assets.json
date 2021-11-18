@@ -901,9 +901,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Core.csproj",
-      "projectName": "SocialNetwork.Core",
-      "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Core.csproj",
+      "projectUniqueName": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Domain.csproj",
+      "projectName": "SocialNetwork.Domain",
+      "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Domain.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\obj\\",
       "projectStyle": "PackageReference",

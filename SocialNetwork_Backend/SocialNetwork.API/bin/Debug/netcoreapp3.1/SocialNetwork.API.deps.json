@@ -31,13 +31,14 @@
     ".NETCoreApp,Version=v3.1": {
       "SocialNetwork.API/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Microsoft.AspNetCore.Authentication.Google": "3.1.21",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.21",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.21",
           "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.0.0",
           "SocialNetwork.Common": "1.0.0",
-          "SocialNetwork.Core": "1.0.0",
+          "SocialNetwork.Domain": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -776,17 +777,17 @@
           "SocialNetwork.Common.dll": {}
         }
       },
-      "SocialNetwork.Core/1.0.0": {
+      "SocialNetwork.Domain/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "FluentValidation.AspNetCore": "10.3.4",
           "SocialNetwork.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "SocialNetwork.Core.dll": {}
+          "SocialNetwork.Domain.dll": {}
         },
         "compile": {
-          "SocialNetwork.Core.dll": {}
+          "SocialNetwork.Domain.dll": {}
         }
       },
       "SocialNetwork.Infrastructure/1.0.0": {
@@ -2788,7 +2789,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SocialNetwork.Core/1.0.0": {
+    "SocialNetwork.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

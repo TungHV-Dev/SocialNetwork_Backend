@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x4scIIQ41b/85O9XczBZSl35+XdV256SC0P4+B/nNzka06SvYxExx53+nURUg+QN3iDscbyER9ULXQgjRGpgPQ==",
+  "dgSpecHash": "hoThnxYjtGeJNny3x5bPvC4ANcUaxELivM8weNqAy9nf9yxHfb8MEU/d36ESKj44oMwxQFlU3mcny7my7j/VpQ==",
   "success": true,
-  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Core.csproj",
+  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

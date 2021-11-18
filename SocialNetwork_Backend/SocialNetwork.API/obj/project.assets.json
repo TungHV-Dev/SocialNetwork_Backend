@@ -536,7 +536,7 @@
           "bin/placeholder/SocialNetwork.Common.dll": {}
         }
       },
-      "SocialNetwork.Core/1.0.0": {
+      "SocialNetwork.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -545,10 +545,10 @@
           "SocialNetwork.Infrastructure": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/SocialNetwork.Core.dll": {}
+          "bin/placeholder/SocialNetwork.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SocialNetwork.Core.dll": {}
+          "bin/placeholder/SocialNetwork.Domain.dll": {}
         }
       },
       "SocialNetwork.Infrastructure/1.0.0": {
@@ -1625,10 +1625,10 @@
       "path": "../SocialNetwork.Common/SocialNetwork.Common.csproj",
       "msbuildProject": "../SocialNetwork.Common/SocialNetwork.Common.csproj"
     },
-    "SocialNetwork.Core/1.0.0": {
+    "SocialNetwork.Domain/1.0.0": {
       "type": "project",
-      "path": "../SocialNetwork.Core/SocialNetwork.Core.csproj",
-      "msbuildProject": "../SocialNetwork.Core/SocialNetwork.Core.csproj"
+      "path": "../SocialNetwork.Domain/SocialNetwork.Domain.csproj",
+      "msbuildProject": "../SocialNetwork.Domain/SocialNetwork.Domain.csproj"
     },
     "SocialNetwork.Infrastructure/1.0.0": {
       "type": "project",
@@ -1638,13 +1638,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Microsoft.AspNetCore.Authentication.Google >= 3.1.21",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.21",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.21",
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.0.0",
       "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer >= 5.0.0",
       "SocialNetwork.Common >= 1.0.0",
-      "SocialNetwork.Core >= 1.0.0",
+      "SocialNetwork.Domain >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1678,8 +1679,11 @@
             "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Common\\SocialNetwork.Common.csproj": {
               "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Common\\SocialNetwork.Common.csproj"
             },
-            "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Core.csproj": {
-              "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Core.csproj"
+            "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Domain.csproj": {
+              "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Core\\SocialNetwork.Domain.csproj"
+            },
+            "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Domain\\SocialNetwork.Domain.csproj": {
+              "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork_Backend\\SocialNetwork.Domain\\SocialNetwork.Domain.csproj"
             }
           }
         }
@@ -1694,6 +1698,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
           "Microsoft.AspNetCore.Authentication.Google": {
             "target": "Package",
             "version": "[3.1.21, )"

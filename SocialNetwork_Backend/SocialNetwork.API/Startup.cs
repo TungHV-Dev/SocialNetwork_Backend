@@ -7,8 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using SocialNetwork.API.Configurations;
 using SocialNetwork.Common.Configurations;
-using SocialNetwork.Core.Mapping;
-using SocialNetwork.Core.Validations;
+using SocialNetwork.Domain.Mapping;
+using SocialNetwork.Domain.Validations;
 
 namespace SocialNetwork.API
 {

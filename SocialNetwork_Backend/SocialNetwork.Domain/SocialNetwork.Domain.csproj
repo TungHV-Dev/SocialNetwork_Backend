@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Handlers\Comment\" />
+    <Folder Include="Handlers\Like\" />
+    <Folder Include="Handlers\FriendRequest\" />
+    <Folder Include="Handlers\Messenger\" />
+    <Folder Include="Handlers\Profile\" />
+    <Folder Include="Handlers\Post\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialNetwork.Infrastructure\SocialNetwork.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -10,4 +10,3 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Infrast
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Infrastructure\obj\Debug\netcoreapp3.1\SocialNetwork.Infrastructure.csproj.AssemblyReference.cache
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Infrastructure\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Infrastructure\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Infrastructure\obj\Debug\netcoreapp3.1\SocialNetwork.Infrastructure.csproj.CopyComplete

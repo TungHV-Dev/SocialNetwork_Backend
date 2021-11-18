@@ -44,11 +44,6 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Core.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Core.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -58,3 +53,8 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Infrastructure.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Infrastructure.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Domain.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Domain.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.API\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll

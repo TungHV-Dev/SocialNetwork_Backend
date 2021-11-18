@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.21" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.21" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.21" />
@@ -15,7 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SocialNetwork.Common\SocialNetwork.Common.csproj" />
-    <ProjectReference Include="..\SocialNetwork.Core\SocialNetwork.Core.csproj" />
+    <ProjectReference Include="..\SocialNetwork.Core\SocialNetwork.Domain.csproj" />
+    <ProjectReference Include="..\SocialNetwork.Domain\SocialNetwork.Domain.csproj" />
   </ItemGroup>
 
 

@@ -1,0 +1,10 @@
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\bin\Debug\netcoreapp3.1\SocialNetwork.Data.deps.json
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\bin\Debug\netcoreapp3.1\SocialNetwork.Data.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.csproj.AssemblyReference.cache
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.AssemblyInfoInputs.cache
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.AssemblyInfo.cs
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.csproj.CoreCompileInputs.cache
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork_Backend\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
