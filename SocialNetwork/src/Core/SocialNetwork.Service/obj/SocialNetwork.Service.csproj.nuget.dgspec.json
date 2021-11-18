@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\SocialNetwork.Service.csproj": {}
+    "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj": {}
   },
   "projects": {
-    "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\SocialNetwork.Service.csproj": {
+    "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
+        "projectUniqueName": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
         "projectName": "SocialNetwork.Service",
-        "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
+        "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\obj\\",
+        "outputPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

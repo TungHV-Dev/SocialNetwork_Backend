@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qMwcT0hEJCRD+P6jw4TGAsK0FUtMS5p2wah+t/ott6NhmbHnIAfNHiiBJ6o6klhDz88YJCy4xc08qrGXuIoH1g==",
+  "dgSpecHash": "aTNTeuSP7rOufGYXopaFDzZuLnh0IB2sBuOgMfaSBkX7kG9VIKQHEoDKRYrUWlb0wUcTvpE5Xd337V7V1YP5Rg==",
   "success": true,
-  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
+  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],

@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SocialNetwork.Service\SocialNetwork.Service.csproj" />
     <ProjectReference Include="..\..\Core\SocialNetwork.Common\SocialNetwork.Common.csproj" />
     <ProjectReference Include="..\..\Core\SocialNetwork.Domain\SocialNetwork.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\SocialNetwork.Service\SocialNetwork.Service.csproj" />
     <ProjectReference Include="..\..\Infrastructure\SocialNetwork.Repository\SocialNetwork.Repository.csproj" />
   </ItemGroup>
 
