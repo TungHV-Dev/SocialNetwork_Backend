@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "F5uoW6OfvRF9MrhKFxSkwxeo+0KUYZblL7i5oMfA3MQER4Q/Abp1Qa/WHMPHmd8dXgwxHmMdy7zsOO99o00bag==",
+  "success": true,
+  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Infrastructure\\SocialNetwork.Repository\\SocialNetwork.Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

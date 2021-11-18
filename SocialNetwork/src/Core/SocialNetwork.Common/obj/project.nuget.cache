@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "1tkWwPfXpj1I6u1s49V3JGr0RQWrBAskwxC4S5/U4s6Rb2RmKZDzLr9OJHCdEqsK0DkK2NkZLVE22z8VVEXYOQ==",
+  "success": true,
+  "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Common\\SocialNetwork.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

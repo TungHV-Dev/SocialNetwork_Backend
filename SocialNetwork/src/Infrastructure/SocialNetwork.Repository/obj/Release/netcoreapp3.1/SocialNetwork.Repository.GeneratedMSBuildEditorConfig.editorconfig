@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = SocialNetwork.Repository
+build_property.ProjectDir = E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\
