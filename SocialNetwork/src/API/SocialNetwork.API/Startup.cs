@@ -9,6 +9,9 @@ using SocialNetwork.API.Configurations;
 using SocialNetwork.Common.Configurations;
 using SocialNetwork.Domain.Mapping;
 using SocialNetwork.Domain.Validations;
+using SocialNetwork.Service.Mapping;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace SocialNetwork.API
 {
@@ -30,16 +33,20 @@ namespace SocialNetwork.API
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
 
+            // Connect to database
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddScoped<IDbConnection>((sp) => new SqlConnection(connectionString));
+
             // Add setting options
-            AppSetting.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
             services.Configure<JWTSetting>(Configuration.GetSection("JWTSetting"));
             services.Configure<PaginationSetting>(Configuration.GetSection("PaginationSetting"));
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(ModelMapping).Assembly);
 
-            // Add Repositories
+            // Add Dependency Injection
             services.RegisterRepositories();
+            services.RegisterServices();
 
             // Add FluentValidation
             services.RegisterModelValidation();

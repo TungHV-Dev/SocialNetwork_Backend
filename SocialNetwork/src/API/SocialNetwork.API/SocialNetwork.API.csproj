@@ -12,12 +12,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SocialNetwork.Common\SocialNetwork.Common.csproj" />
-    <ProjectReference Include="..\SocialNetwork.Domain\SocialNetwork.Domain.csproj" />
-    <ProjectReference Include="..\SocialNetwork.Repository\SocialNetwork.Repository.csproj" />
+    <ProjectReference Include="..\..\..\SocialNetwork.Service\SocialNetwork.Service.csproj" />
+    <ProjectReference Include="..\..\Core\SocialNetwork.Common\SocialNetwork.Common.csproj" />
+    <ProjectReference Include="..\..\Core\SocialNetwork.Domain\SocialNetwork.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\SocialNetwork.Repository\SocialNetwork.Repository.csproj" />
   </ItemGroup>
 
 
