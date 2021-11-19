@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using SocialNetwork.Common.Authorization;
+using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Models;
+using System;
 using System.Linq;
 using System.Security.Claims;
 
@@ -22,10 +24,11 @@ namespace SocialNetwork.API.Filters
         #region Public Function
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var userEmail = context.HttpContext.User.FindFirstValue(ClaimTypes.Email);
-            var userName = context.HttpContext.User.FindFirstValue(ClaimTypes.Name);
+            var userID = Guid.Parse(context.HttpContext.User.FindFirstValue(CustomClaimTypes.UserID));
+            var userEmail = context.HttpContext.User.FindFirstValue(CustomClaimTypes.Email);
+            var userName = context.HttpContext.User.FindFirstValue(CustomClaimTypes.Name);
 
-            _securityDataProvider.SetUserData(new UserData { UserEmail = userEmail, UserName = userName });
+            _securityDataProvider.SetUserData(new UserData { UserID = userID, UserEmail = userEmail, UserName = userName });
         }
         #endregion
     }

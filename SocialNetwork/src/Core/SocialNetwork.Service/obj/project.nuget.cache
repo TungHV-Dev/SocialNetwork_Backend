@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VP66c+Ojj/FmnOLxC0PWLU9Sw8Fr57+RZQ57ClGvSmNBbFF9S0Tnhqn2ZWEH7QuDvCeCzFC6We46cLTKsC0EZQ==",
+  "dgSpecHash": "gP8mAFytY33YkVGeJOV5uWS3LC+j4W4fJ0RnMv18vk4ghNF1o4vA2k0DHWaC8OTiSG8c29NEdJuCos6rWlu/gA==",
   "success": true,
   "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
   "expectedPackageFiles": [

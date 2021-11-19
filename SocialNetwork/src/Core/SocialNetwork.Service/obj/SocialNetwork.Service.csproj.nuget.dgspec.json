@@ -91,7 +91,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Common\\SocialNetwork.Common.csproj": {
+                "projectPath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Common\\SocialNetwork.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

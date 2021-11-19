@@ -24,7 +24,7 @@
 
         public static class Post
         {
-
+            public const string CREATE_POST = "sp_CreatePost";
         }
 
         public static class User

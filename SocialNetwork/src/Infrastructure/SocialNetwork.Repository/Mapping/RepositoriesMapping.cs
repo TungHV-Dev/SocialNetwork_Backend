@@ -9,6 +9,7 @@ namespace SocialNetwork.Domain.Mapping
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPostRepository, PostRepository>();
 
             return services;
         }

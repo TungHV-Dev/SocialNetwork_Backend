@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
+using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Authentication;
 using System.Reflection;
 
@@ -21,6 +22,9 @@ namespace SocialNetwork.Domain.Mapping
         {
             // Authentication
             services.AddMediatR(typeof(RegisterCommand).GetTypeInfo().Assembly);
+
+            // Post
+            services.AddMediatR(typeof(CreatePostCommand).GetTypeInfo().Assembly);
 
             return services;
         }

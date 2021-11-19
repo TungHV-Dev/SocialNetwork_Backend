@@ -72,6 +72,7 @@ namespace SocialNetwork.Service.Implementations
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
+                    new Claim(CustomClaimTypes.UserID, request.UserID.ToString()),
                     new Claim(CustomClaimTypes.Name, request.UserName),
                     new Claim(CustomClaimTypes.Email, request.Email),
                     new Claim(CustomClaimTypes.Role, request.Role)

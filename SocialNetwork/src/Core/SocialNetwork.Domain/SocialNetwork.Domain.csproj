@@ -10,7 +10,6 @@
     <Folder Include="Handlers\FriendRequest\" />
     <Folder Include="Handlers\Messenger\" />
     <Folder Include="Handlers\Profile\" />
-    <Folder Include="Handlers\Post\" />
     <Folder Include="Validations\" />
   </ItemGroup>
 
