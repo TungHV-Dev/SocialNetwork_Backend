@@ -1,5 +1,7 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +35,11 @@ namespace SocialNetwork.API
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
 
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore)
+                .AddFluentValidation();
+
             // Connect to database
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddScoped<IDbConnection>((sp) => new SqlConnection(connectionString));
@@ -50,6 +57,9 @@ namespace SocialNetwork.API
 
             // Add FluentValidation
             services.RegisterModelValidation();
+
+            // Add JWT Config
+            services.ConfigureJWT(Configuration);
 
             // Add Swagger
             services.ConfigureSwagger();
@@ -70,6 +80,7 @@ namespace SocialNetwork.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseSwagger();

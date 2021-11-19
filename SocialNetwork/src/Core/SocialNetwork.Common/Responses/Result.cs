@@ -1,4 +1,4 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
 
 namespace SocialNetwork.Common.Responses
 {
@@ -6,7 +6,7 @@ namespace SocialNetwork.Common.Responses
     {
         public T Data { get; set; }
         public bool IsSuccess { get; set; }
-        public Error Error { get; set; }
+        public IEnumerable<Error> Error { get; set; }
 
         public static Result<TData> Success<TData>(TData data)
         {
@@ -15,36 +15,6 @@ namespace SocialNetwork.Common.Responses
                 Data = data,
                 IsSuccess = true,
                 Error = null
-            };
-        }
-
-        public static Result<TData> BadRequest<TData>(string message)
-        {
-            return new Result<TData>
-            {
-                Data = default,
-                IsSuccess = false,
-                Error = new Error { Code = HttpStatusCode.BadRequest.GetHashCode(), Message = message }
-            };
-        }
-
-        public static Result<TData> Conflict<TData>(string message)
-        {
-            return new Result<TData>
-            {
-                Data = default,
-                IsSuccess = false,
-                Error = new Error { Code = HttpStatusCode.Conflict.GetHashCode(), Message = message }
-            };
-        }
-
-        public static Result<TData> NotFound<TData>(string message)
-        {
-            return new Result<TData>
-            {
-                Data = default,
-                IsSuccess = false,
-                Error = new Error { Code = HttpStatusCode.NotFound.GetHashCode(), Message = message }
             };
         }
     }

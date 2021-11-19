@@ -48,7 +48,6 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\staticwebassets\SocialNetwork.API.StaticWebAssets.xml
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\SocialNetwork.API.styles.css
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.RazorTargetAssemblyInfo.cache
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.csproj.CopyComplete
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.genruntimeconfig.cache
@@ -60,3 +59,11 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Service.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Service.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Dapper.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Data.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.csproj.CopyComplete

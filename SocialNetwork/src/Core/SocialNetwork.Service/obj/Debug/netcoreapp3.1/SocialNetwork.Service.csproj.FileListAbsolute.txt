@@ -18,3 +18,10 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Servic
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\obj\Debug\netcoreapp3.1\SocialNetwork.Service.csproj.CoreCompileInputs.cache
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\obj\Debug\netcoreapp3.1\SocialNetwork.Service.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\obj\Debug\netcoreapp3.1\SocialNetwork.Service.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Data.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Repository.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Repository.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Service\obj\Debug\netcoreapp3.1\SocialNetwork.Service.csproj.CopyComplete

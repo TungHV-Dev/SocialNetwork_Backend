@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Handlers\Comment\" />
     <Folder Include="Handlers\Like\" />
     <Folder Include="Handlers\FriendRequest\" />
@@ -14,12 +13,17 @@
     <Folder Include="Handlers\Post\" />
     <Folder Include="Mapping\" />
     <Folder Include="Validations\" />
-    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialNetwork.Data\SocialNetwork.Data.csproj" />
+    <ProjectReference Include="..\SocialNetwork.Service\SocialNetwork.Service.csproj" />
   </ItemGroup>
 
 </Project>

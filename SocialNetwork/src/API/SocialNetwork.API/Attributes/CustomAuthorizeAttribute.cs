@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SocialNetwork.API.Filters;
 
-namespace SocialNetwork.API.Authorization
+namespace SocialNetwork.API.Attributes
 {
     public class CustomAuthorizeAttribute : TypeFilterAttribute
     {

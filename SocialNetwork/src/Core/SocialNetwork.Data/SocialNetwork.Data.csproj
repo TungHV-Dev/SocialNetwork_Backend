@@ -10,8 +10,6 @@
     <Folder Include="Dtos\Like\" />
     <Folder Include="Dtos\Messenger\" />
     <Folder Include="Dtos\Post\" />
-    <Folder Include="Dtos\Profile\" />
-    <Folder Include="Responses\Authentication\" />
     <Folder Include="Responses\Comment\" />
     <Folder Include="Responses\FriendRequest\" />
     <Folder Include="Responses\Like\" />

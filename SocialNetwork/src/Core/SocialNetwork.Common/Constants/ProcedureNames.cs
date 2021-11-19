@@ -2,34 +2,35 @@
 {
     public static class ProcedureNames
     {
-        public static class CommentProcedures
+        public static class Comment
         {
 
         }
 
-        public static class FriendRequestProcedures
+        public static class FriendRequest
         {
 
         }
 
-        public static class LikeProcedures
+        public static class Like
         {
 
         }
 
-        public static class MessageProcedures
+        public static class Message
         {
 
         }
 
-        public static class PostProcedures
+        public static class Post
         {
 
         }
 
-        public static class ProfileProcedures
+        public static class User
         {
-
+            public const string FIND_USER_BY_USER_NAME = "sp_FindUserByUserName";
+            public const string REGISTER_NEW_USER = "sp_RegisterNewUser";
         }
     }
 }

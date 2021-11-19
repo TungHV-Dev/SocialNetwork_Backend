@@ -4,7 +4,7 @@ using SocialNetwork.Common.Models;
 using System.Linq;
 using System.Security.Claims;
 
-namespace SocialNetwork.API.Authorization
+namespace SocialNetwork.API.Filters
 {
     public class CustomAuthorizeFilter : IAuthorizationFilter
     {
@@ -22,11 +22,10 @@ namespace SocialNetwork.API.Authorization
         #region Public Function
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var userEmail = context.HttpContext.User.Identity.Name;
-            var claims = context.HttpContext.User.Claims;
-            var fullName = claims.FirstOrDefault(x => string.Compare(x.Type, ClaimTypes.Name, false) == 0)?.Value;
+            var userEmail = context.HttpContext.User.FindFirstValue(ClaimTypes.Email);
+            var userName = context.HttpContext.User.FindFirstValue(ClaimTypes.Name);
 
-            _securityDataProvider.SetUserData(new UserData { UserEmail = userEmail, FullName = fullName });
+            _securityDataProvider.SetUserData(new UserData { UserEmail = userEmail, UserName = userName });
         }
         #endregion
     }

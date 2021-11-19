@@ -8,3 +8,8 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetw
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\obj\Debug\netcoreapp3.1\SocialNetwork.Repository.csproj.CoreCompileInputs.cache
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\obj\Debug\netcoreapp3.1\SocialNetwork.Repository.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\obj\Debug\netcoreapp3.1\SocialNetwork.Repository.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\bin\Debug\netcoreapp3.1\SocialNetwork.Data.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Infrastructure\SocialNetwork.Repository\obj\Debug\netcoreapp3.1\SocialNetwork.Repository.csproj.CopyComplete
