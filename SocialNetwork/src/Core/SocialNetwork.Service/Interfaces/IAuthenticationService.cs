@@ -7,5 +7,6 @@ namespace SocialNetwork.Service.Interfaces
     public interface IAuthenticationService
     {
         Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request);
+        Task<bool> RegisterAsync(RegisterRequest request);
     }
 }

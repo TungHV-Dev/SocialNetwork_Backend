@@ -1,5 +1,5 @@
-﻿using SocialNetwork.Data.Dtos.User;
-using SocialNetwork.Data.Requests.Authentication;
+﻿using SocialNetwork.Data.Dtos.Authentication;
+using SocialNetwork.Data.Dtos.User;
 using System.Threading.Tasks;
 
 namespace SocialNetwork.Repository.Interfaces
@@ -7,6 +7,6 @@ namespace SocialNetwork.Repository.Interfaces
     public interface IUserRepository
     {
         Task<FindUserByUserNameResponseDto> FindUserByUserName(string userName);
-        Task<bool> RegisterNewUser(RegisterRequest request);
+        Task<bool> RegisterNewUser(RegisterRequestDto request);
     }
 }

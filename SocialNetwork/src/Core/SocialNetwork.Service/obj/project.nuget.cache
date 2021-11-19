@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "A4A7NBsvcnXtH2Sni8u4IGwC0GEli6hZyODzP+WGVIjM11rCHWPiwhSrpAiY2oMEHL10d3q1N1o58qBNA3PtKw==",
+  "dgSpecHash": "VP66c+Ojj/FmnOLxC0PWLU9Sw8Fr57+RZQ57ClGvSmNBbFF9S0Tnhqn2ZWEH7QuDvCeCzFC6We46cLTKsC0EZQ==",
   "success": true,
   "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\Core\\SocialNetwork.Service\\SocialNetwork.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

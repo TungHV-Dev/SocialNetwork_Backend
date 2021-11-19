@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Exceptions;
+using SocialNetwork.Data.Dtos.Authentication;
 using SocialNetwork.Data.Dtos.User;
-using SocialNetwork.Data.Requests.Authentication;
 using SocialNetwork.Repository.Interfaces;
 using System.Data;
 using System.Threading.Tasks;
@@ -36,15 +36,16 @@ namespace SocialNetwork.Repository.Implementations
             };
         }
 
-        public async Task<bool> RegisterNewUser(RegisterRequest request)
+        public async Task<bool> RegisterNewUser(RegisterRequestDto request)
         {
             var parameters = new DynamicParameters();
             parameters.Add(SqlParameters.FIRST_NAME, request.FirstName, DbType.String);
             parameters.Add(SqlParameters.LAST_NAME, request.LastName, DbType.String);
             parameters.Add(SqlParameters.USER_NAME, request.Username, DbType.String);
             parameters.Add(SqlParameters.USER_EMAIL, request.Email, DbType.String);
-            parameters.Add(SqlParameters.PASSWORD, request.Password, DbType.String);
+            parameters.Add(SqlParameters.PASSWORD_HASH, request.PasswordHash, DbType.String);
             parameters.Add(SqlParameters.IS_PUBLIC_ACCOUNT, request.IsPublicAccount, DbType.Boolean);
+            parameters.Add(SqlParameters.ROLE, Roles.USER, DbType.String);
 
             var procedureName = ProcedureNames.User.REGISTER_NEW_USER;
             var actionStatus = await _dbConnection.ExecuteScalarAsync<int>(procedureName, parameters, commandType: CommandType.StoredProcedure);

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using SocialNetwork.API.Configurations;
+using SocialNetwork.API.Filters;
 using SocialNetwork.Common.Configurations;
 using SocialNetwork.Domain.Mapping;
 using SocialNetwork.Domain.Validations;
@@ -35,10 +36,21 @@ namespace SocialNetwork.API
                 options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
 
-            services.AddMvc(option => option.EnableEndpointRouting = false)
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
-                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore)
-                .AddFluentValidation();
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+                options.Filters.Add<CustomExceptionFilter>();
+
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+            .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore)
+            .AddFluentValidation(options =>
+            {
+                options.DisableDataAnnotationsValidation = true;
+                options.ImplicitlyValidateChildProperties = true;
+            });
+
+            // Add mediator
+            services.RegisterMediatR();
 
             // Connect to database
             var connectionString = Configuration.GetConnectionString("DefaultConnection");

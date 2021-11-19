@@ -13,7 +13,8 @@
         public const string LAST_NAME = "@LastName";
         public const string USER_NAME = "@UserName";
         public const string USER_EMAIL = "@UserEmail";
-        public const string PASSWORD = "@Password";
+        public const string PASSWORD_HASH = "@PasswordHash";
         public const string IS_PUBLIC_ACCOUNT = "@IsPublicAccount";
+        public const string ROLE = "@Role";
     }
 }

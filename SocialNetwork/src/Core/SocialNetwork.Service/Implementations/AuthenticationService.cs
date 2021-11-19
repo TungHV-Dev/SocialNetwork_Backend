@@ -3,6 +3,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using SocialNetwork.Common.Configurations;
 using SocialNetwork.Common.Constants;
+using SocialNetwork.Common.Exceptions;
+using SocialNetwork.Data.Dtos.Authentication;
 using SocialNetwork.Data.Requests.Authentication;
 using SocialNetwork.Data.Responses.Authentication;
 using SocialNetwork.Repository.Interfaces;
@@ -36,13 +38,26 @@ namespace SocialNetwork.Service.Implementations
         public async Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request)
         {
             var user = await _userRepository.FindUserByUserName(request.Username);
+            var isVerified = BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash);
+            if (!isVerified)
+            {
+                throw new BadRequestException(ErrorMessages.INCORRECT_PASSWORD);
+            }
 
             var generateRequest = _mapper.Map<GenerateJwtTokenRequest>(user);
-            JwtSecurityToken jwtSecurityToken = GenerateJWToken(generateRequest);
+            var jwtSecurityToken = GenerateJWToken(generateRequest);
 
             var response = _mapper.Map<AuthenticationResponse>(user);
             response.JWToken = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
 
+            return response;
+        }
+
+        public async Task<bool> RegisterAsync(RegisterRequest request)
+        {
+            var registerRequestDto = _mapper.Map<RegisterRequestDto>(request);
+            registerRequestDto.PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+            var response = await _userRepository.RegisterNewUser(registerRequestDto);
             return response;
         }
 

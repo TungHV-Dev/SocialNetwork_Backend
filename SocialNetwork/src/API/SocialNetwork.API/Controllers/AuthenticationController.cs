@@ -1,7 +1,5 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SocialNetwork.API.Attributes;
 using SocialNetwork.Common.Responses;
 using SocialNetwork.Data.Responses.Authentication;
 using SocialNetwork.Domain.Commands.Authentication;
@@ -12,7 +10,6 @@ namespace SocialNetwork.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class AuthenticationController : ControllerBase
     {
         #region Fields
@@ -32,7 +29,6 @@ namespace SocialNetwork.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost("register")]
-        [CustomAuthorize]
         public async Task<Result<bool>> Register([FromBody] RegisterCommand command)
         {
             var data = await _mediator.Send(command);
@@ -45,7 +41,6 @@ namespace SocialNetwork.API.Controllers
         /// <param name="query"></param>
         /// <returns></returns>
         [HttpGet("login")]
-        [CustomAuthorize]
         public async Task<Result<LoginResponse>> Login([FromQuery] LoginQuery query)
         {
             var data = await _mediator.Send(query);
