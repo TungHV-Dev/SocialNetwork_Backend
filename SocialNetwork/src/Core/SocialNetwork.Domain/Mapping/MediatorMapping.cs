@@ -1,8 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
+using SocialNetwork.Domain.Commands.Emotion;
 using SocialNetwork.Domain.Commands.Post;
-using SocialNetwork.Domain.Queries.Authentication;
+using SocialNetwork.Domain.Queries.Post;
 using System.Reflection;
 
 namespace SocialNetwork.Domain.Mapping
@@ -22,17 +23,24 @@ namespace SocialNetwork.Domain.Mapping
         {
             // Authentication
             services.AddMediatR(typeof(RegisterCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(LoginCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(ChangePasswordCommand).GetTypeInfo().Assembly);
 
             // Post
             services.AddMediatR(typeof(CreatePostCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(DeletePostCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(EditPostCommand).GetTypeInfo().Assembly);
+
+            // Like
+            services.AddMediatR(typeof(ExpressEmotionCommand).GetTypeInfo().Assembly);
 
             return services;
         }
 
         private static IServiceCollection RegisterQueries(this IServiceCollection services)
         {
-            // Authentication
-            services.AddMediatR(typeof(LoginQuery).GetTypeInfo().Assembly);
+            // Post
+            services.AddMediatR(typeof(GetAllPostsQuery).GetTypeInfo().Assembly);
 
             return services;
         }

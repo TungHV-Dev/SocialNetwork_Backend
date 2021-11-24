@@ -58,5 +58,22 @@ namespace SocialNetwork.Repository.Implementations
                 _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }
+
+        public async Task<bool> ChangePassword(ChangePasswordRequestDto request)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add(SqlParameters.USER_NAME, request.UserName, DbType.String);
+            parameters.Add(SqlParameters.NEW_PASSWORD_HASH, request.NewPasswordHash, DbType.String);
+
+            var procedureName = ProcedureNames.User.CHANGE_PASSWORD;
+            var actionStatus = await _dbConnection.ExecuteScalarAsync<int>(procedureName, parameters, commandType: CommandType.StoredProcedure);
+
+            return actionStatus switch
+            {
+                0 => true,
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_USER_ID),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
+            };
+        }
     }
 }

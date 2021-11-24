@@ -8,5 +8,6 @@ namespace SocialNetwork.Service.Interfaces
     {
         Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request);
         Task<bool> RegisterAsync(RegisterRequest request);
+        Task<bool> ChangePasswordAsync(ChangePasswordRequest request);
     }
 }

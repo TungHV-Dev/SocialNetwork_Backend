@@ -8,5 +8,6 @@ namespace SocialNetwork.Repository.Interfaces
     {
         Task<FindUserByUserNameResponseDto> FindUserByUserName(string userName);
         Task<bool> RegisterNewUser(RegisterRequestDto request);
+        Task<bool> ChangePassword(ChangePasswordRequestDto request);
     }
 }

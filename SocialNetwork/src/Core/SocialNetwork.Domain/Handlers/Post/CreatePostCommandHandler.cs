@@ -2,6 +2,7 @@
 using MediatR;
 using SocialNetwork.Common.Authorization;
 using SocialNetwork.Data.Dtos.Post;
+using SocialNetwork.Data.Responses.Post;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Repository.Interfaces;
 using System.Threading;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SocialNetwork.Domain.Handlers.Post
 {
-    public class CreatePostCommandHandler : IRequestHandler<CreatePostCommand, bool>
+    public class CreatePostCommandHandler : IRequestHandler<CreatePostCommand, CreatePostResponse>
     {
         #region Fields
         private readonly ISecurityDataProvider _securityDataProvider;
@@ -27,7 +28,7 @@ namespace SocialNetwork.Domain.Handlers.Post
         #endregion
 
         #region Public
-        public async Task<bool> Handle(CreatePostCommand request, CancellationToken cancellationToken)
+        public async Task<CreatePostResponse> Handle(CreatePostCommand request, CancellationToken cancellationToken)
         {
             var requestDto = _mapper.Map<CreatePostRequestDto>(request);
             requestDto.UserID = _securityDataProvider.GetUserData().UserID;

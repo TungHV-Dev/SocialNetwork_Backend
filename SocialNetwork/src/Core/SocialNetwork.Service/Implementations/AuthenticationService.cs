@@ -61,6 +61,23 @@ namespace SocialNetwork.Service.Implementations
             return response;
         }
 
+        public async Task<bool> ChangePasswordAsync(ChangePasswordRequest request)
+        {
+            var user = await _userRepository.FindUserByUserName(request.UserName);
+            var isVerified = BCrypt.Net.BCrypt.Verify(request.CurrentPassword, user.PasswordHash);
+            if (!isVerified)
+            {
+                throw new BadRequestException(ErrorMessages.INCORRECT_PASSWORD);
+            }
+
+            var requestDto = new ChangePasswordRequestDto
+            {
+                UserName = request.UserName,
+                NewPasswordHash = BCrypt.Net.BCrypt.HashPassword(request.NewPassword)
+            };
+            var response = await _userRepository.ChangePassword(requestDto);
+            return response;
+        }
         #endregion
 
         #region Private Functions

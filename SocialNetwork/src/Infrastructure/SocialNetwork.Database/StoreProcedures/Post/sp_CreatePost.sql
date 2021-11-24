@@ -1,14 +1,16 @@
-﻿CREATE OR ALTER PROCEDURE [dbo].[sp_CreatePost]
+﻿USE [Social_Network_DB]
+GO
+
+CREATE OR ALTER PROCEDURE [dbo].[sp_CreatePost]
 	@Content NVARCHAR(MAX),
 	@Status TINYINT,
-	@UserID UNIQUEIDENTIFIER
+	@UserID UNIQUEIDENTIFIER,
+	@ActionStatus INT OUTPUT
 AS
 BEGIN
-	-- Declare variables
-	BEGIN
-		DECLARE @ActionStatus INT = 0;
-	END
-
+	SET @ActionStatus = 0;
+	DECLARE @PostID UNIQUEIDENTIFIER = NEWID()
+	
 	BEGIN TRY
 		IF NOT EXISTS(
 			SELECT TOP 1 1
@@ -22,6 +24,7 @@ BEGIN
 			END
 		ELSE
 			BEGIN
+				-- Insert new post to Post table
 				INSERT INTO [dbo].[Post]
 				(
 					ID
@@ -34,7 +37,7 @@ BEGIN
 				)
 				VALUES
 				(
-					NEWID()
+					@PostID
 					, @Content
 					, @Status
 					, @UserID
@@ -42,6 +45,8 @@ BEGIN
 					, SYSUTCDATETIME()
 					, SYSUTCDATETIME()
 				)
+				-- Return value
+				SELECT PostID = @PostID
 			END
 	END TRY
 
@@ -49,6 +54,5 @@ BEGIN
 		SET @ActionStatus = @@ERROR
 		PRINT ERROR_MESSAGE()
 	END CATCH
-
-	SELECT @ActionStatus
 END
+GO

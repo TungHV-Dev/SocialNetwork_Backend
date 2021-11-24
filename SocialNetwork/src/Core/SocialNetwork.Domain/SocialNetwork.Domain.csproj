@@ -6,11 +6,9 @@
 
   <ItemGroup>
     <Folder Include="Handlers\Comment\" />
-    <Folder Include="Handlers\Like\" />
     <Folder Include="Handlers\FriendRequest\" />
     <Folder Include="Handlers\Messenger\" />
     <Folder Include="Handlers\Profile\" />
-    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>

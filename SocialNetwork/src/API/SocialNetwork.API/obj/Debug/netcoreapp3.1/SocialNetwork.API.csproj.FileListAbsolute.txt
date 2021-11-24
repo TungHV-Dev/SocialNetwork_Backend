@@ -68,3 +68,4 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.csproj.CopyComplete
