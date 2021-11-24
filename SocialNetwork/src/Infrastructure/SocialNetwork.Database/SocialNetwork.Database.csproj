@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="InitData\" />
+    <Folder Include="StoreProcedures\Comment\" />
   </ItemGroup>
 
 </Project>

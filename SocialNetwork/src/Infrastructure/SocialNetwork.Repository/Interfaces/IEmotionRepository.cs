@@ -8,5 +8,6 @@ namespace SocialNetwork.Repository.Interfaces
     {
         Task<bool> ExpressEmotionToPost(ExpressEmotionRequestDto request);
         Task<GetAllEmotionResponse> GetAllEmotionOfPost(GetAllEmotionRequestDto request);
+        Task<GetAllUserResponse> GetEmotionUserOfPost(GetEmotionUserRequestDto request);
     }
 }

@@ -1,11 +1,11 @@
 ﻿USE [Social_Network_DB]
 GO
 
-CREATE TABLE [dbo].[Like]
+CREATE TABLE [dbo].[Emotion]
 (
 	UserID		UNIQUEIDENTIFIER	NOT NULL,
 	PostID		UNIQUEIDENTIFIER	NOT NULL,
-	IsDeleted			BIT			NOT NULL,
+	[Status]			TINYINT		NOT NULL,
 	CreatedDate			DATETIME	NOT NULL,
 	ModifiedDate		DATETIME	NOT NULL
 )

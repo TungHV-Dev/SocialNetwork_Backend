@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Handlers\Comment\" />
-    <Folder Include="Handlers\FriendRequest\" />
+    <Folder Include="Handlers\Friend\" />
     <Folder Include="Handlers\Messenger\" />
     <Folder Include="Handlers\Profile\" />
   </ItemGroup>

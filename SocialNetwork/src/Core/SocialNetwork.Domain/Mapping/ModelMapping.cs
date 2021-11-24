@@ -8,6 +8,7 @@ using SocialNetwork.Data.Responses.Authentication;
 using SocialNetwork.Domain.Commands.Authentication;
 using SocialNetwork.Domain.Commands.Emotion;
 using SocialNetwork.Domain.Commands.Post;
+using SocialNetwork.Domain.Queries.Emotion;
 
 namespace SocialNetwork.Domain.Mapping
 {
@@ -15,6 +16,7 @@ namespace SocialNetwork.Domain.Mapping
     {
         public ModelMapping()
         {
+            // Authentication
             CreateMap<FindUserByUserNameResponseDto, GenerateJwtTokenRequest>();
             CreateMap<FindUserByUserNameResponseDto, AuthenticationResponse>();
             CreateMap<LoginCommand, AuthenticationRequest>();
@@ -28,10 +30,13 @@ namespace SocialNetwork.Domain.Mapping
                 .ForMember(destination => destination.IsPublicAccount, source => source.MapFrom(x => x.IsPublicAccount));
             CreateMap<ChangePasswordCommand, ChangePasswordRequest>();
 
+            // Post
             CreateMap<CreatePostCommand, CreatePostRequestDto>();
             CreateMap<EditPostCommand, EditPostRequestDto>();
 
+            // Emotion
             CreateMap<ExpressEmotionCommand, ExpressEmotionRequestDto>();
+            CreateMap<GetEmotionUserQuery, GetEmotionUserRequestDto>();
         }
     }
 }

@@ -2,14 +2,15 @@
 using MediatR;
 using SocialNetwork.Common.Authorization;
 using SocialNetwork.Data.Dtos.Emotion;
-using SocialNetwork.Domain.Commands.Emotion;
+using SocialNetwork.Data.Responses.Emotion;
+using SocialNetwork.Domain.Queries.Emotion;
 using SocialNetwork.Repository.Interfaces;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace SocialNetwork.Domain.Handlers.Emotion
 {
-    public class ExpressEmotionCommandHandler : IRequestHandler<ExpressEmotionCommand, bool>
+    public class GetEmotionUserQueryHandler : IRequestHandler<GetEmotionUserQuery, GetAllUserResponse>
     {
         #region Fields
         private readonly ISecurityDataProvider _securityDataProvider;
@@ -18,7 +19,7 @@ namespace SocialNetwork.Domain.Handlers.Emotion
         #endregion
 
         #region Contructor
-        public ExpressEmotionCommandHandler(ISecurityDataProvider securityDataProvider, IEmotionRepository emotionRepository, IMapper mapper)
+        public GetEmotionUserQueryHandler(ISecurityDataProvider securityDataProvider, IEmotionRepository emotionRepository, IMapper mapper)
         {
             _securityDataProvider = securityDataProvider;
             _emotionRepository = emotionRepository;
@@ -26,15 +27,13 @@ namespace SocialNetwork.Domain.Handlers.Emotion
         }
         #endregion
 
-        #region Public Functions
-        public async Task<bool> Handle(ExpressEmotionCommand request, CancellationToken cancellationToken)
+        public async Task<GetAllUserResponse> Handle(GetEmotionUserQuery request, CancellationToken cancellationToken)
         {
-            var requestDto = _mapper.Map<ExpressEmotionRequestDto>(request);
+            var requestDto = _mapper.Map<GetEmotionUserRequestDto>(request);
             requestDto.UserID = _securityDataProvider.GetUserData().UserID;
 
-            var response = await _emotionRepository.ExpressEmotionToPost(requestDto);
+            var response = await _emotionRepository.GetEmotionUserOfPost(requestDto);
             return response;
         }
-        #endregion
     }
 }

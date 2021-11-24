@@ -13,14 +13,14 @@ namespace SocialNetwork.API.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Authorize]
-    public class FriendRequestController : ControllerBase
+    public class FriendController : ControllerBase
     {
         #region Fields
         private readonly IMediator _mediator;
         #endregion
 
         #region Contructor
-        public FriendRequestController(IMediator mediator)
+        public FriendController(IMediator mediator)
         {
             _mediator = mediator;
         }

@@ -7,7 +7,7 @@
 
         }
 
-        public static class FriendRequest
+        public static class Friend
         {
 
         }
@@ -16,6 +16,7 @@
         {
             public const string EXPRESS_EMOTION = "sp_ExpressEmotion";
             public const string GET_ALL_EMOTIONS = "sp_GetAllEmotions";
+            public const string GET_EMOTION_USER = "sp_GetEmotionUser";
         }
 
         public static class Message

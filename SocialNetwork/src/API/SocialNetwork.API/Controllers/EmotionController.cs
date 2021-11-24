@@ -42,16 +42,29 @@ namespace SocialNetwork.API.Controllers
         }
 
         /// <summary>
-        /// Get all user with their emotion in a post
+        /// Get all users with their emotion in a post
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
-        [HttpGet("get-all-emotions")]
+        [HttpGet("get-users-in-all-emotions")]
         [CustomAuthorize]
-        public async Task<Result<GetAllEmotionResponse>> GetAllEmotion([FromQuery] GetAllEmotionQuery query)
+        public async Task<Result<GetAllEmotionResponse>> GetAllEmotionUser([FromQuery] GetAllEmotionUserQuery query)
         {
             var data = await _mediator.Send(query);
             return Result<GetAllEmotionResponse>.Success(data);
+        }
+
+        /// <summary>
+        /// Get all users has the same emotion in a post
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpGet("get-users-in-emotion")]
+        [CustomAuthorize]
+        public async Task<Result<GetAllUserResponse>> GetEmotionUser([FromQuery] GetEmotionUserQuery query)
+        {
+            var data = await _mediator.Send(query);
+            return Result<GetAllUserResponse>.Success(data);
         }
         #endregion
     }

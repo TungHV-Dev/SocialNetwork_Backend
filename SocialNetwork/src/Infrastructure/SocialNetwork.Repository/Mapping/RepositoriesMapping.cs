@@ -11,6 +11,7 @@ namespace SocialNetwork.Domain.Mapping
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<IEmotionRepository, EmotionRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
 
             return services;
         }

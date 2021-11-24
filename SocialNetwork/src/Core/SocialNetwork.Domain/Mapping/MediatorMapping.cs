@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
 using SocialNetwork.Domain.Commands.Emotion;
 using SocialNetwork.Domain.Commands.Post;
+using SocialNetwork.Domain.Queries.Emotion;
 using SocialNetwork.Domain.Queries.Post;
 using System.Reflection;
 
@@ -31,7 +32,7 @@ namespace SocialNetwork.Domain.Mapping
             services.AddMediatR(typeof(DeletePostCommand).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(EditPostCommand).GetTypeInfo().Assembly);
 
-            // Like
+            // Emotion
             services.AddMediatR(typeof(ExpressEmotionCommand).GetTypeInfo().Assembly);
 
             return services;
@@ -41,6 +42,10 @@ namespace SocialNetwork.Domain.Mapping
         {
             // Post
             services.AddMediatR(typeof(GetAllPostsQuery).GetTypeInfo().Assembly);
+
+            // Emotion
+            services.AddMediatR(typeof(GetAllEmotionUserQuery).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetEmotionUserQuery).GetTypeInfo().Assembly);
 
             return services;
         }
