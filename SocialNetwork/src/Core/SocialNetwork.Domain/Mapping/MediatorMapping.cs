@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
+using SocialNetwork.Domain.Commands.Comment;
 using SocialNetwork.Domain.Commands.Emotion;
 using SocialNetwork.Domain.Commands.Post;
+using SocialNetwork.Domain.Queries.Comment;
 using SocialNetwork.Domain.Queries.Emotion;
 using SocialNetwork.Domain.Queries.Post;
 using System.Reflection;
@@ -35,6 +37,11 @@ namespace SocialNetwork.Domain.Mapping
             // Emotion
             services.AddMediatR(typeof(ExpressEmotionCommand).GetTypeInfo().Assembly);
 
+            // Comment
+            services.AddMediatR(typeof(CreateCommentCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(DeleteCommentCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(EditCommentCommand).GetTypeInfo().Assembly);
+
             return services;
         }
 
@@ -46,6 +53,9 @@ namespace SocialNetwork.Domain.Mapping
             // Emotion
             services.AddMediatR(typeof(GetAllEmotionUserQuery).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(GetEmotionUserQuery).GetTypeInfo().Assembly);
+
+            // Comment
+            services.AddMediatR(typeof(GetAllCommentQuery).GetTypeInfo().Assembly);
 
             return services;
         }

@@ -8,7 +8,6 @@
     <Folder Include="Dtos\Comment\" />
     <Folder Include="Dtos\Friend\" />
     <Folder Include="Dtos\Messenger\" />
-    <Folder Include="Responses\Comment\" />
     <Folder Include="Responses\Friend\" />
     <Folder Include="Responses\Messenger\" />
     <Folder Include="Responses\Profile\" />

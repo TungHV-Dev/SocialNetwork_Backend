@@ -16,3 +16,4 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Domain
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Domain\bin\Debug\netcoreapp3.1\SocialNetwork.Service.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Domain\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Domain\bin\Debug\netcoreapp3.1\SocialNetwork.Repository.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Domain\obj\Debug\netcoreapp3.1\SocialNetwork.Domain.csproj.CopyComplete

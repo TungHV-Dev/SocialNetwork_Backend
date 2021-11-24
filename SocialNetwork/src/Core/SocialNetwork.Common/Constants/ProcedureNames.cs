@@ -4,7 +4,10 @@
     {
         public static class Comment
         {
-
+            public const string CREATE_COMMENT = "sp_CreateComment";
+            public const string DELETE_COMMENT = "sp_DeleteComment";
+            public const string EDIT_COMMENT = "sp_EditComment";
+            public const string GET_ALL_COMMENT = "sp_GetAllComment";
         }
 
         public static class Friend
