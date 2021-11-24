@@ -4,6 +4,7 @@ using SocialNetwork.Common.Exceptions;
 using SocialNetwork.Data.Dtos.Emotion;
 using SocialNetwork.Data.Responses.Emotion;
 using SocialNetwork.Repository.Interfaces;
+using System;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -42,40 +43,52 @@ namespace SocialNetwork.Repository.Implementations
             };
         }
 
-        public async Task<GetAllEmotionResponse> GetAllEmotionOfPost(GetAllEmotionRequestDto request)
+        public async Task<GetAllEmotionResponse> GetAllEmotionOfPost(Guid postID)
         {
             var parameters = new DynamicParameters();
-            parameters.Add(SqlParameters.USER_ID, request.UserID, DbType.Guid);
-            parameters.Add(SqlParameters.POST_ID, request.PostID, DbType.Guid);
+            parameters.Add(SqlParameters.POST_ID, postID, DbType.Guid);
             parameters.Add(SqlParameters.TOTAL_ITEMS, DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
 
             var procedureName = ProcedureNames.Emotion.GET_ALL_EMOTIONS;
             var data = await _dbConnection.QueryAsync<GetEmotionResponse>(procedureName, parameters, commandType: CommandType.StoredProcedure);
             var totalItems = parameters.Get<int>(SqlParameters.TOTAL_ITEMS);
+            var actionStatus = parameters.Get<int>(SqlParameters.ACTION_STATUS);
 
-            return new GetAllEmotionResponse
+            return actionStatus switch
             {
-                TotalItems = totalItems,
-                Data = data
+                0 => new GetAllEmotionResponse
+                {
+                    TotalItems = totalItems,
+                    Data = data
+                },
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_POST_ID),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }
 
         public async Task<GetAllUserResponse> GetEmotionUserOfPost(GetEmotionUserRequestDto request)
         {
             var parameters = new DynamicParameters();
-            parameters.Add(SqlParameters.USER_ID, request.UserID, DbType.Guid);
             parameters.Add(SqlParameters.POST_ID, request.PostID, DbType.Guid);
             parameters.Add(SqlParameters.STATUS, request.Status, DbType.Int16);
             parameters.Add(SqlParameters.TOTAL_ITEMS, DbType.Int32, direction: ParameterDirection.Output);
+            parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
 
             var procedureName = ProcedureNames.Emotion.GET_EMOTION_USER;
             var data = await _dbConnection.QueryAsync<UserResponse>(procedureName, parameters, commandType: CommandType.StoredProcedure);
             var totalItems = parameters.Get<int>(SqlParameters.TOTAL_ITEMS);
+            var actionStatus = parameters.Get<int>(SqlParameters.ACTION_STATUS);
 
-            return new GetAllUserResponse
+            return actionStatus switch
             {
-                TotalItems = totalItems,
-                Data = data
+                0 => new GetAllUserResponse
+                {
+                    TotalItems = totalItems,
+                    Data = data
+                },
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_POST_ID),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }
         #endregion

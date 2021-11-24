@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using SocialNetwork.Common.Authorization;
-using SocialNetwork.Data.Dtos.Emotion;
 using SocialNetwork.Data.Responses.Emotion;
 using SocialNetwork.Domain.Queries.Emotion;
 using SocialNetwork.Repository.Interfaces;
@@ -27,12 +26,7 @@ namespace SocialNetwork.Domain.Handlers.Emotion
         #region Public Functions
         public async Task<GetAllEmotionResponse> Handle(GetAllEmotionUserQuery request, CancellationToken cancellationToken)
         {
-            var requestDto = new GetAllEmotionRequestDto
-            {
-                UserID = _securityDataProvider.GetUserData().UserID,
-                PostID = request.PostID
-            };
-            var response = await _emotionRepository.GetAllEmotionOfPost(requestDto);
+            var response = await _emotionRepository.GetAllEmotionOfPost(request.PostID);
             return response;
         }
         #endregion

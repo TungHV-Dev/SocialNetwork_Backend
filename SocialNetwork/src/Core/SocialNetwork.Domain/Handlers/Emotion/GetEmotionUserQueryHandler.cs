@@ -30,8 +30,6 @@ namespace SocialNetwork.Domain.Handlers.Emotion
         public async Task<GetAllUserResponse> Handle(GetEmotionUserQuery request, CancellationToken cancellationToken)
         {
             var requestDto = _mapper.Map<GetEmotionUserRequestDto>(request);
-            requestDto.UserID = _securityDataProvider.GetUserData().UserID;
-
             var response = await _emotionRepository.GetEmotionUserOfPost(requestDto);
             return response;
         }

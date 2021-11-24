@@ -7,6 +7,5 @@ namespace SocialNetwork.Data.Dtos.Emotion
     {
         public Guid PostID { get; set; }
         public EmotionStatus Status { get; set; }
-        public Guid UserID { get; set; }
     }
 }
