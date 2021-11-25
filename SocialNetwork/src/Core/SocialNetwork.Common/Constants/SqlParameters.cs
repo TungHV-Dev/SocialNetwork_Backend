@@ -30,5 +30,7 @@
         public const string STATUS = "@Status";
 
         public const string POST_ID = "@PostID";
+
+        public const string COMMENT_ID = "@CommentID";
     }
 }

@@ -1,8 +1,6 @@
 ﻿using MediatR;
 using SocialNetwork.Domain.Commands.Comment;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SocialNetwork.Repository.Interfaces;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,20 +9,21 @@ namespace SocialNetwork.Domain.Handlers.Comment
     public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, bool>
     {
         #region Fields
-
+        private readonly ICommentRepository _commentRepository;
         #endregion
 
         #region Contructor
-        public DeleteCommentCommandHandler()
+        public DeleteCommentCommandHandler(ICommentRepository commentRepository)
         {
-
+            _commentRepository = commentRepository;
         }
         #endregion
 
         #region
-        public Task<bool> Handle(DeleteCommentCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(DeleteCommentCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var data = await _commentRepository.DeleteComment(request.CommentID);
+            return data;
         }
         #endregion
     }

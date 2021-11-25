@@ -12,5 +12,7 @@
         public const string INCORRECT_CONFIRM_PASSWORD = "New password and confirmation password must be the same";
 
         public const string INVALID_POST_ID = "Post id does not exist";
+
+        public const string INVALID_COMMENT_ID = "Comment id does not exist";
     }
 }
