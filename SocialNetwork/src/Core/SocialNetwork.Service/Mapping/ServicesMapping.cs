@@ -11,6 +11,7 @@ namespace SocialNetwork.Service.Mapping
         {
             services.AddScoped<ISecurityDataProvider, SecurityDataProvider>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddTransient<IEmailService, EmailService>();
 
             return services;
         }

@@ -8,7 +8,6 @@ CREATE TABLE [dbo].[User]
 	LastName		NVARCHAR(255)		NOT NULL,
 	Username		NVARCHAR(255)		NOT NULL,
 	PasswordHash	NVARCHAR(MAX)		NOT NULL,
-	PasswordSalt	NVARCHAR(MAX)		NOT NULL,
 	Email			NVARCHAR(255)		NOT NULL,
 	IsPublicAccount	BIT					NOT NULL,
 	[Role]			NVARCHAR(255)		NOT NULL,

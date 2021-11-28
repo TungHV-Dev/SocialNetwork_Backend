@@ -4,6 +4,7 @@ using SocialNetwork.Common.Exceptions;
 using SocialNetwork.Data.Dtos.Authentication;
 using SocialNetwork.Data.Dtos.User;
 using SocialNetwork.Data.Responses.Friend;
+using SocialNetwork.Data.Responses.User;
 using SocialNetwork.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,18 @@ namespace SocialNetwork.Repository.Implementations
 {
     public class UserRepository : IUserRepository
     {
+        #region Fields
         private readonly IDbConnection _dbConnection;
+        #endregion
 
+        #region Contructor
         public UserRepository(IDbConnection dbConnection)
         {
             _dbConnection = dbConnection;
         }
+        #endregion
 
+        #region Public Functions
         public async Task<FindUserByUserNameResponseDto> FindUserByUserName(string userName)
         {
             var parameters = new DynamicParameters();
@@ -97,5 +103,31 @@ namespace SocialNetwork.Repository.Implementations
                 _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }
+
+        public async Task<GetUserResponse> GetUserById(Guid userID)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add(SqlParameters.USER_ID, userID, DbType.Guid);
+            parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
+
+            var procedureName = ProcedureNames.User.GET_USER_BY_ID;
+            var data = await _dbConnection.QueryFirstAsync<GetUserResponse>(procedureName, parameters, commandType: CommandType.StoredProcedure);
+            var actionStatus = parameters.Get<int>(SqlParameters.ACTION_STATUS);
+
+            return actionStatus switch
+            {
+                0 => data,
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_USER_ID),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
+            };
+        }
+
+        public async Task<IEnumerable<GetUserDto>> GetAllUser()
+        {
+            var procedureName = ProcedureNames.User.GET_ALL_USER;
+            var data = await _dbConnection.QueryAsync<GetUserDto>(procedureName, commandType: CommandType.StoredProcedure);
+            return data;
+        }
+        #endregion
     }
 }

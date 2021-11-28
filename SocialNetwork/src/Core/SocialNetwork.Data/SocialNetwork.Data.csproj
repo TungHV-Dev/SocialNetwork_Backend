@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Responses\User\" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.12" />
   </ItemGroup>
 
   <ItemGroup>

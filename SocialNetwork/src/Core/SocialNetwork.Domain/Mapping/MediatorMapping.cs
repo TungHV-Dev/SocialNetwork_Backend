@@ -7,8 +7,10 @@ using SocialNetwork.Domain.Commands.Friend;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Comment;
 using SocialNetwork.Domain.Queries.Emotion;
+using SocialNetwork.Domain.Queries.ExportData;
 using SocialNetwork.Domain.Queries.Friend;
 using SocialNetwork.Domain.Queries.Post;
+using SocialNetwork.Domain.Queries.User;
 using System.Reflection;
 
 namespace SocialNetwork.Domain.Mapping
@@ -68,6 +70,14 @@ namespace SocialNetwork.Domain.Mapping
 
             // Friend
             services.AddMediatR(typeof(GetAllPendingFriendRequestQuery).GetTypeInfo().Assembly);
+
+            // User
+            services.AddMediatR(typeof(GetUserQuery).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetFriendsOfUserQuery).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetAllUserQuery).GetTypeInfo().Assembly);
+
+            // Export Data
+            services.AddMediatR(typeof(ExportListUserQuery).GetTypeInfo().Assembly);
 
             return services;
         }

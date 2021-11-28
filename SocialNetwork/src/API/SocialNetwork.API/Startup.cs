@@ -59,6 +59,7 @@ namespace SocialNetwork.API
             // Add setting options
             services.Configure<JWTSetting>(Configuration.GetSection("JWTSetting"));
             services.Configure<PaginationSetting>(Configuration.GetSection("PaginationSetting"));
+            services.Configure<EmailSetting>(Configuration.GetSection("EmailSetting"));
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(ModelMapping).Assembly);

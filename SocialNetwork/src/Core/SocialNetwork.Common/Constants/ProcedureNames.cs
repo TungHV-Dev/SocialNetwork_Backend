@@ -41,6 +41,8 @@
             public const string REGISTER_NEW_USER = "sp_RegisterNewUser";
             public const string CHANGE_PASSWORD = "sp_ChangePassword";
             public const string GET_ALL_FRIENDS_OF_USER = "sp_GetAllFriendOfUser";
+            public const string GET_USER_BY_ID = "sp_GetUserById";
+            public const string GET_ALL_USER = "sp_GetAllUser";
         }
     }
 }
