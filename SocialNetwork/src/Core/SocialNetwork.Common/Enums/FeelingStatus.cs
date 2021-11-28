@@ -1,7 +1,8 @@
 ﻿namespace SocialNetwork.Common.Enums
 {
-    public enum PostStatus
+    public enum FeelingStatus
     {
+        NoFeeling,
         Happy,
         Excited,
         Relax,

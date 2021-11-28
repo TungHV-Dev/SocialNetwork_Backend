@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Friend\" />
-    <Folder Include="Handlers\Profile\" />
+    <Folder Include="Handlers\User\" />
   </ItemGroup>
 
   <ItemGroup>

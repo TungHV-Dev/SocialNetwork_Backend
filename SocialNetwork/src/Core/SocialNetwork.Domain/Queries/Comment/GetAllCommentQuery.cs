@@ -8,6 +8,6 @@ namespace SocialNetwork.Domain.Queries.Comment
     public class GetAllCommentQuery : IRequest<GetAllCommentResponse>
     {
         public Guid PostID { get; set; }
-        public BasePagingRequest PagingRequest { get; set; }
+        public PagingRequest PagingRequest { get; set; }
     }
 }

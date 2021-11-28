@@ -3,7 +3,10 @@ using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Exceptions;
 using SocialNetwork.Data.Dtos.Authentication;
 using SocialNetwork.Data.Dtos.User;
+using SocialNetwork.Data.Responses.Friend;
 using SocialNetwork.Repository.Interfaces;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -72,6 +75,25 @@ namespace SocialNetwork.Repository.Implementations
             {
                 0 => true,
                 -1 => throw new BadRequestException(ErrorMessages.INVALID_USER_ID),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
+            };
+        }
+
+        public async Task<IEnumerable<GetFriendOfUserResponse>> GetFriendsOfUser(Guid userID)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add(SqlParameters.USER_ID, userID, DbType.Guid);
+            parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
+
+            var procedureName = ProcedureNames.User.GET_ALL_FRIENDS_OF_USER;
+            var data = await _dbConnection.QueryAsync<GetFriendOfUserResponse>(procedureName, parameters, commandType: CommandType.StoredProcedure);
+            var actionStatus = parameters.Get<int>(SqlParameters.ACTION_STATUS);
+
+            return actionStatus switch
+            {
+                0 => data,
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_USER_ID),
+                -2 => null,
                 _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }

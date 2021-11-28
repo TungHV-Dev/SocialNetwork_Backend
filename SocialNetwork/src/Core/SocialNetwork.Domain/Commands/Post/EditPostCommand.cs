@@ -8,6 +8,7 @@ namespace SocialNetwork.Domain.Commands.Post
     {
         public Guid PostID { get; set; }
         public string Content { get; set; }
-        public PostStatus Status { get; set; }
+        public FeelingStatus? FeelingStatus { get; set; }
+        public PrivacyStatus PrivacyStatus { get; set; }
     }
 }

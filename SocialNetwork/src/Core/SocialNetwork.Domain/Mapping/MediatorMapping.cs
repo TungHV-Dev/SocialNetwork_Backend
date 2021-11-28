@@ -48,7 +48,7 @@ namespace SocialNetwork.Domain.Mapping
         private static IServiceCollection RegisterQueries(this IServiceCollection services)
         {
             // Post
-            services.AddMediatR(typeof(GetAllPostsQuery).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetAllPostsInTimelineQuery).GetTypeInfo().Assembly);
 
             // Emotion
             services.AddMediatR(typeof(GetAllEmotionUserQuery).GetTypeInfo().Assembly);

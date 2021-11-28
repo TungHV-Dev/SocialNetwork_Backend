@@ -29,7 +29,7 @@ namespace SocialNetwork.Repository.Implementations
             var parameters = new DynamicParameters();
             parameters.Add(SqlParameters.USER_ID, request.UserID, DbType.Guid);
             parameters.Add(SqlParameters.POST_ID, request.PostID, DbType.Guid);
-            parameters.Add(SqlParameters.STATUS, request.Status, DbType.Int16);
+            parameters.Add(SqlParameters.EMOTION_STATUS, request.Status, DbType.Int16);
 
             var procedureName = ProcedureNames.Emotion.EXPRESS_EMOTION;
             var actionStatus = await _dbConnection.ExecuteScalarAsync<int>(procedureName, parameters, commandType: CommandType.StoredProcedure);
@@ -71,7 +71,7 @@ namespace SocialNetwork.Repository.Implementations
         {
             var parameters = new DynamicParameters();
             parameters.Add(SqlParameters.POST_ID, request.PostID, DbType.Guid);
-            parameters.Add(SqlParameters.STATUS, request.Status, DbType.Int16);
+            parameters.Add(SqlParameters.EMOTION_STATUS, request.Status, DbType.Int16);
             parameters.Add(SqlParameters.TOTAL_ITEMS, DbType.Int32, direction: ParameterDirection.Output);
             parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
 

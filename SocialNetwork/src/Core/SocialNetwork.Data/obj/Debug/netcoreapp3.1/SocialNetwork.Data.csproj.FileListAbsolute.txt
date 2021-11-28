@@ -10,3 +10,4 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Data\o
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Data\bin\Debug\netcoreapp3.1\SocialNetwork.Common.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Data\bin\Debug\netcoreapp3.1\SocialNetwork.Common.pdb
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\Core\SocialNetwork.Data\obj\Debug\netcoreapp3.1\SocialNetwork.Data.csproj.CopyComplete

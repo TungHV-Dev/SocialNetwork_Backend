@@ -3,9 +3,9 @@ using System;
 
 namespace SocialNetwork.Data.Dtos.Post
 {
-    public class GetAllPostsRequestDto
+    public class GetAllPostsOfUserRequestDto
     {
         public Guid UserID { get; set; }
-        public BasePagingRequest Request { get; set; }
+        public BasePagingRequest PagingRequest { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Exceptions;
+using SocialNetwork.Common.Requests;
 using SocialNetwork.Data.Dtos.Comment;
 using SocialNetwork.Data.Responses.Comment;
 using SocialNetwork.Repository.Interfaces;
@@ -82,8 +83,10 @@ namespace SocialNetwork.Repository.Implementations
         {
             var parameters = new DynamicParameters();
             parameters.Add(SqlParameters.POST_ID, request.PostID, DbType.Guid);
-            parameters.Add(SqlParameters.CURRENT_PAGE, request.CurrentPage, DbType.Int32);
-            parameters.Add(SqlParameters.PAGE_SIZE, request.PageSize, DbType.Int32);
+            parameters.Add(SqlParameters.CURRENT_PAGE, request.PagingRequest.CurrentPage, DbType.Int32);
+            parameters.Add(SqlParameters.PAGE_SIZE, request.PagingRequest.PageSize, DbType.Int32);
+            parameters.Add(SqlParameters.SEARCH, PagingRequest.CleanSearchString(request.PagingRequest.Search), DbType.String);
+            parameters.Add(SqlParameters.SORT, SortRequest.BuildSortString(request.PagingRequest.Sorts), DbType.String);
             parameters.Add(SqlParameters.TOTAL_ITEMS, DbType.Int32, direction: ParameterDirection.Output);
             parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
 
@@ -96,12 +99,12 @@ namespace SocialNetwork.Repository.Implementations
             {
                 0 => new GetAllCommentResponse
                 {
-                    CurrentPage = request.CurrentPage,
-                    PageSize = request.PageSize,
+                    CurrentPage = request.PagingRequest.CurrentPage,
+                    PageSize = request.PagingRequest.PageSize,
                     TotalItems = totalItems,
                     Data = data
                 },
-                -1 => throw new BadRequestException(ErrorMessages.INVALID_COMMENT_ID),
+                -1 => throw new BadRequestException(ErrorMessages.INVALID_POST_ID),
                 _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
             };
         }

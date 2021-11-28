@@ -4,7 +4,7 @@ using SocialNetwork.Data.Responses.Post;
 
 namespace SocialNetwork.Domain.Queries.Post
 {
-    public class GetAllPostsQuery : IRequest<GetAllPostsResponse>
+    public class GetAllPostsInTimelineQuery : IRequest<GetAllPostsInTimelineResponse>
     {
         public BasePagingRequest Request { get; set; }
     }

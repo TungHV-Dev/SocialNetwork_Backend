@@ -55,19 +55,6 @@ namespace SocialNetwork.API.Controllers
         }
 
         /// <summary>
-        /// Get all post of user with paging
-        /// </summary>
-        /// <param name="query"></param>
-        /// <returns></returns>
-        [HttpPost("get-all-posts")]
-        [CustomAuthorize]
-        public async Task<Result<GetAllPostsResponse>> GetAllPosts([FromBody] GetAllPostsQuery query)
-        {
-            var data = await _mediator.Send(query);
-            return Result<GetAllPostsResponse>.Success(data);
-        }
-
-        /// <summary>
         /// Edit an existing post of user
         /// </summary>
         /// <param name="command"></param>
@@ -78,6 +65,32 @@ namespace SocialNetwork.API.Controllers
         {
             var data = await _mediator.Send(command);
             return Result<bool>.Success(data);
+        }
+
+        /// <summary>
+        /// Get all post in timeline of user (all posts of friends of user)
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpPost("get-all-posts-in-timeline")]
+        [CustomAuthorize]
+        public async Task<Result<GetAllPostsInTimelineResponse>> GetAllPostsInTimeline([FromQuery] GetAllPostsInTimelineQuery query)
+        {
+            var data = await _mediator.Send(query);
+            return Result<GetAllPostsInTimelineResponse>.Success(data);
+        }
+
+        /// <summary>
+        /// get all posts of user
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        [HttpGet("get-all-posts-of-user")]
+        [CustomAuthorize]
+        public async Task<Result<GetAllPostsOfUserResponse>> GetAllPostsOfUser([FromQuery] GetAllPostsOfUserQuery query)
+        {
+            var data = await _mediator.Send(query);
+            return Result<GetAllPostsOfUserResponse>.Success(data);
         }
 
         #endregion

@@ -35,6 +35,7 @@ BEGIN
 					END
 				ELSE
 					BEGIN
+						-- Delete post
 						UPDATE [dbo].[Post]
 						SET
 							IsDeleted = 1
@@ -42,6 +43,20 @@ BEGIN
 						WHERE
 							ID = @PostID
 							AND IsDeleted = 0
+						-- Delete all comments of post
+						UPDATE [dbo].[Comment]
+						SET
+							IsDeleted = 1
+							, ModifiedDate = SYSUTCDATETIME()
+						WHERE
+							PostID = @PostID
+							AND IsDeleted = 0
+						-- Delete all emotions of post
+						UPDATE [dbo].Emotion
+						SET
+							[Status] = 0
+						WHERE
+							PostID = @PostID
 					END
 			END
 	END TRY

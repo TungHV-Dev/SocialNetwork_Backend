@@ -1,7 +1,7 @@
 ﻿USE [Social_Network_DB]
 GO
 
-CREATE OR ALTER PROCEDURE [dbo].[sp_DeleteComment]
+CREATE OR ALTER PROCEDURE [dbo].[sp_EditComment]
 	@CommentID UNIQUEIDENTIFIER,
 	@Content NVARCHAR(MAX)
 AS
@@ -23,11 +23,11 @@ BEGIN
 			BEGIN
 				UPDATE [dbo].[Comment]
 				SET
-					IsDeleted = 1
-					, Content = @Content
+					Content = @Content
 					, ModifiedDate = SYSUTCDATETIME()
 				WHERE
-					ID = @CommentID;
+					ID = @CommentID
+					AND IsDeleted = 0
 			END
 	END TRY
 
@@ -35,4 +35,5 @@ BEGIN
 		SET @ActionStatus = @@ERROR
 		PRINT ERROR_MESSAGE()
 	END CATCH
+	SELECT @ActionStatus
 END

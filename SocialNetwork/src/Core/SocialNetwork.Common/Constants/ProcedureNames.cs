@@ -10,11 +10,6 @@
             public const string GET_ALL_COMMENT = "sp_GetAllComment";
         }
 
-        public static class Friend
-        {
-
-        }
-
         public static class Emotion
         {
             public const string EXPRESS_EMOTION = "sp_ExpressEmotion";
@@ -22,17 +17,13 @@
             public const string GET_EMOTION_USER = "sp_GetEmotionUser";
         }
 
-        public static class Message
-        {
-
-        }
-
         public static class Post
         {
             public const string CREATE_POST = "sp_CreatePost";
             public const string DELETE_POST = "sp_DeletePost";
-            public const string GET_ALL_POSTS = "sp_GetAllPosts";
             public const string EDIT_POST = "sp_EditPost";
+            public const string GET_ALL_POSTS_IN_TIMELINE = "sp_GetAllPostsInTimeline";
+            public const string GET_ALL_POSTS_OF_USER = "sp_GetAllPostsOfUser";
         }
 
         public static class User
@@ -40,6 +31,7 @@
             public const string FIND_USER_BY_USER_NAME = "sp_FindUserByUserName";
             public const string REGISTER_NEW_USER = "sp_RegisterNewUser";
             public const string CHANGE_PASSWORD = "sp_ChangePassword";
+            public const string GET_ALL_FRIENDS_OF_USER = "sp_GetAllFriendOfUser";
         }
     }
 }

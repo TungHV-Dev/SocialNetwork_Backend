@@ -8,6 +8,7 @@
         public const string MODIFIED_DATE = "@ModifiedDate";
         public const string CREATED_BY = "@CreatedBy";
         public const string CREATED_DATE = "@CreatedDate";
+        public const string JSON_DATA = "@JsonData";
 
         public const string CURRENT_PAGE = "@CurrentPage";
         public const string PAGE_SIZE = "@PageSize";
@@ -27,8 +28,9 @@
         public const string ROLE = "@Role";
 
         public const string CONTENT = "@Content";
-        public const string STATUS = "@Status";
-
+        public const string FEELING_STATUS = "@FeelingStatus";
+        public const string PRIVACY_STATUS = "@PrivacyStatus";
+        public const string EMOTION_STATUS = "@EmotionStatus";
         public const string POST_ID = "@PostID";
 
         public const string COMMENT_ID = "@CommentID";

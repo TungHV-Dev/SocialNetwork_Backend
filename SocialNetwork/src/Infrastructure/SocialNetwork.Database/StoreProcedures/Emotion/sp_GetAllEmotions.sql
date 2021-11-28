@@ -20,15 +20,17 @@ BEGIN
 					AND IsDeleted = 0
 				)
 				BEGIN
+					-- Post id does not exist
 					SET @ActionStatus = -1
 				END
 			ELSE
 				BEGIN
+					-- Get number of emotions
 					SELECT @TotalItems = COUNT(e.UserID)
 					FROM [dbo].[Emotion] e WITH (NOLOCK)
 					WHERE
 						e.PostID = @PostID
-
+					-- Get response data
 					SELECT
 						UserID = e.UserID
 						, UserName = u.Username
@@ -38,6 +40,7 @@ BEGIN
 						ON e.UserID = u.ID
 					WHERE
 						e.PostID = @PostID
+						AND u.IsDeleted = 0
 				END
 		END
 	END TRY

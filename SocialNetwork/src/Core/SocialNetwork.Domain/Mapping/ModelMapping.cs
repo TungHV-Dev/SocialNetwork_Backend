@@ -12,6 +12,7 @@ using SocialNetwork.Domain.Commands.Emotion;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Comment;
 using SocialNetwork.Domain.Queries.Emotion;
+using SocialNetwork.Domain.Queries.Post;
 
 namespace SocialNetwork.Domain.Mapping
 {
@@ -36,6 +37,7 @@ namespace SocialNetwork.Domain.Mapping
             // Post
             CreateMap<CreatePostCommand, CreatePostRequestDto>();
             CreateMap<EditPostCommand, EditPostRequestDto>();
+            CreateMap<GetAllPostsOfUserQuery, GetAllPostsOfUserRequestDto>();
 
             // Emotion
             CreateMap<ExpressEmotionCommand, ExpressEmotionRequestDto>();
@@ -44,10 +46,7 @@ namespace SocialNetwork.Domain.Mapping
             // Comment
             CreateMap<CreateCommentCommand, CreateCommentRequestDto>();
             CreateMap<EditCommentCommand, EditCommentRequestDto>();
-            CreateMap<GetAllCommentQuery, GetAllCommentRequestDto>()
-                .ForMember(destination => destination.PostID, source => source.MapFrom(x => x.PostID))
-                .ForMember(destination => destination.CurrentPage, source => source.MapFrom(x => x.PagingRequest.CurrentPage))
-                .ForMember(destination => destination.PageSize, source => source.MapFrom(x => x.PagingRequest.PageSize));
+            CreateMap<GetAllCommentQuery, GetAllCommentRequestDto>();
         }
     }
 }

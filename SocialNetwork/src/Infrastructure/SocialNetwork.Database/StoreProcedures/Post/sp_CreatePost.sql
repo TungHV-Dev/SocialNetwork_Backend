@@ -3,7 +3,8 @@ GO
 
 CREATE OR ALTER PROCEDURE [dbo].[sp_CreatePost]
 	@Content NVARCHAR(MAX),
-	@Status TINYINT,
+	@FeelingStatus TINYINT,
+	@PrivacyStatus TINYINT,
 	@UserID UNIQUEIDENTIFIER,
 	@ActionStatus INT OUTPUT
 AS
@@ -20,6 +21,7 @@ BEGIN
 				AND u.IsDeleted = 0
 			)
 			BEGIN
+				-- User id does not exist
 				SET @ActionStatus = -1
 			END
 		ELSE
@@ -29,7 +31,8 @@ BEGIN
 				(
 					ID
 					, Content
-					, [Status]
+					, FeelingStatus
+					, PrivacyStatus
 					, UserID
 					, IsDeleted
 					, CreatedDate
@@ -39,7 +42,8 @@ BEGIN
 				(
 					@PostID
 					, @Content
-					, @Status
+					, @FeelingStatus
+					, @PrivacyStatus
 					, @UserID
 					, 0
 					, SYSUTCDATETIME()

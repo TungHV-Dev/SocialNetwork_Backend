@@ -4,7 +4,7 @@ GO
 CREATE OR ALTER PROCEDURE [dbo].[sp_ExpressEmotion]
 	@UserID UNIQUEIDENTIFIER,
 	@PostID UNIQUEIDENTIFIER,
-	@Status TINYINT
+	@EmotionStatus TINYINT
 AS
 BEGIN
 	DECLARE @ActionStatus INT = 0
@@ -44,7 +44,7 @@ BEGIN
 						(
 							@UserID
 							, @PostID
-							, @Status
+							, @EmotionStatus
 						)
 					END
 			END

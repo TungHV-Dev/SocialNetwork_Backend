@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Friend\" />
-    <Folder Include="Responses\Friend\" />
-    <Folder Include="Responses\Profile\" />
+    <Folder Include="Responses\User\" />
   </ItemGroup>
 
   <ItemGroup>

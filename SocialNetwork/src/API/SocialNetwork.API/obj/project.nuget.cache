@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9EziIcC3iteE9wt2zJel0Vdy871Kj1igzsQbmPITddwIzyJ5AC5cpVF3A3XyPDaI22/zJLyliNAVM/KCNFXYcw==",
+  "dgSpecHash": "nNlX2xMBz7f+Oi4oGE2QWrGLD4uB1JVdAIgRIC0U6HdhagrrOfebUQ4Zlz8wlKsechk4RtTaK/40n0SYfE4R3w==",
   "success": true,
   "projectFilePath": "E:\\Git_Project\\SocialNetwork_Backend\\SocialNetwork\\src\\API\\SocialNetwork.API\\SocialNetwork.API.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -3,7 +3,7 @@ GO
 
 CREATE OR ALTER PROCEDURE [dbo].[sp_GetEmotionUser]
 	@PostID UNIQUEIDENTIFIER,
-	@Status TINYINT,
+	@EmotionStatus TINYINT,
 	@TotalItems INT OUTPUT,
 	@ActionStatus INT OUTPUT
 AS
@@ -29,7 +29,7 @@ BEGIN
 					FROM [dbo].[Emotion] e WITH (NOLOCK)
 					WHERE
 						e.PostID = @PostID
-						AND e.[Status] = @Status
+						AND e.[Status] = @EmotionStatus
 
 					SELECT
 						UserID = e.UserID
@@ -39,7 +39,7 @@ BEGIN
 						ON e.UserID = u.ID
 					WHERE
 						e.PostID = @PostID
-						AND e.[Status] = @Status
+						AND e.[Status] = @EmotionStatus
 				END
 		END
 	END TRY

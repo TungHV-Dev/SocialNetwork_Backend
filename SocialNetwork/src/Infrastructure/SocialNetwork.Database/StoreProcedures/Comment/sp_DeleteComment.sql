@@ -23,7 +23,8 @@ BEGIN
 				UPDATE [dbo].[Comment]
 				SET IsDeleted = 1
 				WHERE
-					ID = @CommentID;
+					ID = @CommentID
+					AND IsDeleted = 0
 			END
 	END TRY
 
@@ -31,4 +32,5 @@ BEGIN
 		SET @ActionStatus = @@ERROR
 		PRINT ERROR_MESSAGE()
 	END CATCH
+	SELECT @ActionStatus
 END

@@ -5,7 +5,8 @@ CREATE OR ALTER PROCEDURE [dbo].[sp_EditPost]
 	@UserID UNIQUEIDENTIFIER,
 	@PostID UNIQUEIDENTIFIER,
 	@Content NVARCHAR(MAX),
-	@Status TINYINT
+	@FeelingStatus TINYINT,
+	@PrivacyStatus TINYINT
 AS
 BEGIN
 	DECLARE @ActionStatus INT = 0;
@@ -41,7 +42,8 @@ BEGIN
 						UPDATE [dbo].[Post]
 						SET
 							Content = @Content
-							, [Status] = @Status
+							, FeelingStatus = @FeelingStatus
+							, PrivacyStatus = @PrivacyStatus
 							, ModifiedDate = SYSUTCDATETIME()
 						WHERE
 							ID = @PostID
