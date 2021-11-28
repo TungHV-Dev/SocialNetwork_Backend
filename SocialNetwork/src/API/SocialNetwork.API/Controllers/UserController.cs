@@ -9,7 +9,7 @@ namespace SocialNetwork.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProfileController : ControllerBase
+    public class UserController : ControllerBase
     {
     }
 }

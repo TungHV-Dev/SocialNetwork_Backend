@@ -34,5 +34,12 @@
         public const string POST_ID = "@PostID";
 
         public const string COMMENT_ID = "@CommentID";
+
+        public const string SENDER_ID = "@SenderID";
+        public const string RECEIVER_ID = "@ReceiverID";
+        public const string REQUEST_ID = "@RequestID";
+        public const string FRIEND_ID = "@FriendID";
+        public const string FRIEND_REQUEST_STATUS = "@FriendRequestStatus";
+        public const string FRIEND_REQUEST_ACTION = "@FriendRequestAction";
     }
 }

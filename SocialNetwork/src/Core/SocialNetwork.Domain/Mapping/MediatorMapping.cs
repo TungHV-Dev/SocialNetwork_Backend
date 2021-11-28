@@ -3,9 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
 using SocialNetwork.Domain.Commands.Comment;
 using SocialNetwork.Domain.Commands.Emotion;
+using SocialNetwork.Domain.Commands.Friend;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Comment;
 using SocialNetwork.Domain.Queries.Emotion;
+using SocialNetwork.Domain.Queries.Friend;
 using SocialNetwork.Domain.Queries.Post;
 using System.Reflection;
 
@@ -42,6 +44,12 @@ namespace SocialNetwork.Domain.Mapping
             services.AddMediatR(typeof(DeleteCommentCommand).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(EditCommentCommand).GetTypeInfo().Assembly);
 
+            // Friend
+            services.AddMediatR(typeof(SendFriendRequestCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(CancelFriendRequestCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(ActionForFriendRequestCommand).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(UnfriendCommand).GetTypeInfo().Assembly);
+
             return services;
         }
 
@@ -49,6 +57,7 @@ namespace SocialNetwork.Domain.Mapping
         {
             // Post
             services.AddMediatR(typeof(GetAllPostsInTimelineQuery).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetAllPostsOfUserQuery).GetTypeInfo().Assembly);
 
             // Emotion
             services.AddMediatR(typeof(GetAllEmotionUserQuery).GetTypeInfo().Assembly);
@@ -56,6 +65,9 @@ namespace SocialNetwork.Domain.Mapping
 
             // Comment
             services.AddMediatR(typeof(GetAllCommentQuery).GetTypeInfo().Assembly);
+
+            // Friend
+            services.AddMediatR(typeof(GetAllPendingFriendRequestQuery).GetTypeInfo().Assembly);
 
             return services;
         }

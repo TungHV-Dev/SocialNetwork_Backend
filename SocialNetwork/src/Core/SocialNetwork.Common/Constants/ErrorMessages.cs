@@ -15,5 +15,12 @@
         public const string NOT_FOUND_ANY_POSTS = "Did not find any posts yet";
 
         public const string INVALID_COMMENT_ID = "Comment id does not exist";
+
+        public const string INVALID_REQUEST_ID = "Request id does not exist";
+        public const string INVALID_RECEIVER_ID = "Receiver id does not exist";
+        public const string INVALID_FRIEND_ID = "Friend id does not exist";
+        public const string IS_PENDING_OR_HAVE_BEEN_FRIENDS = "Your request is pending or you and receiver have been friends";
+        public const string REQUEST_IS_ACCEPTED_OR_REJECTED = "Your request is accepted or rejected";
+        public const string NOT_FRIENDS = "You guys are not friends";
     }
 }

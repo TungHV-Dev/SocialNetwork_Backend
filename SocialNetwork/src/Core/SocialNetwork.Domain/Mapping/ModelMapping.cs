@@ -2,6 +2,7 @@
 using SocialNetwork.Data.Dtos.Authentication;
 using SocialNetwork.Data.Dtos.Comment;
 using SocialNetwork.Data.Dtos.Emotion;
+using SocialNetwork.Data.Dtos.Friend;
 using SocialNetwork.Data.Dtos.Post;
 using SocialNetwork.Data.Dtos.User;
 using SocialNetwork.Data.Requests.Authentication;
@@ -9,6 +10,7 @@ using SocialNetwork.Data.Responses.Authentication;
 using SocialNetwork.Domain.Commands.Authentication;
 using SocialNetwork.Domain.Commands.Comment;
 using SocialNetwork.Domain.Commands.Emotion;
+using SocialNetwork.Domain.Commands.Friend;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Comment;
 using SocialNetwork.Domain.Queries.Emotion;
@@ -47,6 +49,9 @@ namespace SocialNetwork.Domain.Mapping
             CreateMap<CreateCommentCommand, CreateCommentRequestDto>();
             CreateMap<EditCommentCommand, EditCommentRequestDto>();
             CreateMap<GetAllCommentQuery, GetAllCommentRequestDto>();
+
+            // Friend
+            CreateMap<ActionForFriendRequestCommand, ActionForFriendRequestDto>();
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using SocialNetwork.Domain.Commands.Authentication;
+using SocialNetwork.Domain.Commands.Friend;
 using SocialNetwork.Domain.Commands.Post;
 using SocialNetwork.Domain.Queries.Emotion;
 using SocialNetwork.Domain.Validations.Authentication;
 using SocialNetwork.Domain.Validations.Emotion;
+using SocialNetwork.Domain.Validations.Friend;
 using SocialNetwork.Domain.Validations.Post;
 
 namespace SocialNetwork.Domain.Validations
@@ -16,6 +18,7 @@ namespace SocialNetwork.Domain.Validations
             services.AddScoped<IValidator<ChangePasswordCommand>, ChangePasswordCommandValidator>();
             services.AddScoped<IValidator<EditPostCommand>, EditPostCommandValidator>();
             services.AddScoped<IValidator<GetEmotionUserQuery>, GetEmotionUserQueryValidator>();
+            services.AddScoped<IValidator<SendFriendRequestCommand>, SendFriendRequestCommandValidator>();
 
             return services;
         }

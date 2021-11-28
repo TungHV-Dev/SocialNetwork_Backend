@@ -6,4 +6,10 @@
         Accept,
         Reject
     }
+
+    public enum ActionForFriendRequest
+    {
+        Accept = FriendRequestStatus.Accept,
+        Reject = FriendRequestStatus.Reject
+    }
 }

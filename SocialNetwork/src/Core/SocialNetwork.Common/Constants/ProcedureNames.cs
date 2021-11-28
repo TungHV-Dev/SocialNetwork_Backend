@@ -17,6 +17,15 @@
             public const string GET_EMOTION_USER = "sp_GetEmotionUser";
         }
 
+        public static class Friend
+        {
+            public const string SEND_FRIEND_REQUEST = "sp_SendFriendRequest";
+            public const string CANCEL_FRIEND_REQUEST = "sp_CancelFriendRequest";
+            public const string ACTION_FOR_FRIEND_REQUEST = "sp_ActionForFriendRequest";
+            public const string UNFRIEND_WITH_ANOTHER_USER = "sp_UnfriendWithAnotherUser";
+            public const string GET_ALL_PENDING_FRIEND_REQUEST = "sp_GetAllPendingFriendRequest";
+        }
+
         public static class Post
         {
             public const string CREATE_POST = "sp_CreatePost";
