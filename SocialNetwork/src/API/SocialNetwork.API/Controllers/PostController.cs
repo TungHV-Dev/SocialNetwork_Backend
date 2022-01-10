@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.API.Attributes;
+using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Responses;
 using SocialNetwork.Data.Responses.Post;
 using SocialNetwork.Domain.Commands.Post;
@@ -34,7 +35,7 @@ namespace SocialNetwork.API.Controllers
         /// <param name="command"></param>
         /// <returns></returns>
         [HttpPost("create-post")]
-        [CustomAuthorize]
+        [CustomAuthorizeAzure(Permission.ADMIN)]
         public async Task<Result<CreatePostResponse>> CreatePost([FromBody] CreatePostCommand command)
         {
             var data = await _mediator.Send(command);

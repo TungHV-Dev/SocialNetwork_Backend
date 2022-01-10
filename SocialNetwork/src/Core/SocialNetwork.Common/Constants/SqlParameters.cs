@@ -8,6 +8,7 @@
         public const string MODIFIED_DATE = "@ModifiedDate";
         public const string CREATED_BY = "@CreatedBy";
         public const string CREATED_DATE = "@CreatedDate";
+        public const string LAST_LOGIN_TIME = "@LastLoginTime";
         public const string JSON_DATA = "@JsonData";
 
         public const string CURRENT_PAGE = "@CurrentPage";

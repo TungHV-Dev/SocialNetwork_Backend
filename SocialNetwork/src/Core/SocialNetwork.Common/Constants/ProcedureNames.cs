@@ -38,11 +38,13 @@
         public static class User
         {
             public const string FIND_USER_BY_USER_NAME = "sp_FindUserByUserName";
+            public const string FIND_USER_AZURE_BY_USER_NAME = "sp_FindUserAzureByUserName";
             public const string REGISTER_NEW_USER = "sp_RegisterNewUser";
             public const string CHANGE_PASSWORD = "sp_ChangePassword";
             public const string GET_ALL_FRIENDS_OF_USER = "sp_GetAllFriendOfUser";
             public const string GET_USER_BY_ID = "sp_GetUserById";
             public const string GET_ALL_USER = "sp_GetAllUser";
+            public const string ADD_USER_AZURE_AD = "sp_AddUserAzureAD";
         }
     }
 }

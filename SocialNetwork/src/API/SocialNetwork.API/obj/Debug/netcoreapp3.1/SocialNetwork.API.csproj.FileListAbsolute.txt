@@ -68,7 +68,6 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\SocialNetwork.Data.pdb
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
-E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\obj\Debug\netcoreapp3.1\SocialNetwork.API.csproj.CopyComplete
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\ClosedXML.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
@@ -80,3 +79,18 @@ E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
 E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Azure.Core.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Certificates.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Web.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Web.Certificate.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.Identity.Web.TokenCache.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Validators.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+E:\Git_Project\SocialNetwork_Backend\SocialNetwork\src\API\SocialNetwork.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

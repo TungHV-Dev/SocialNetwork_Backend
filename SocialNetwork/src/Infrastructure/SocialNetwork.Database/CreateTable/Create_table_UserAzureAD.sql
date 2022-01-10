@@ -1,0 +1,12 @@
+﻿USE [Social_Network_DB]
+GO
+
+CREATE TABLE [dbo].[UserAzureAD]
+(
+	ID				UNIQUEIDENTIFIER	NOT NULL PRIMARY KEY,
+	Username		NVARCHAR(255)		NOT NULL,
+	Email			NVARCHAR(255)		NOT NULL,
+	[Role]			NVARCHAR(255)		NOT NULL,
+	IsDeleted		BIT					NOT NULL,
+	LastLoginTime	DATETIME			NOT NULL
+)

@@ -22,5 +22,7 @@
         public const string IS_PENDING_OR_HAVE_BEEN_FRIENDS = "Your request is pending or you and receiver have been friends";
         public const string REQUEST_IS_ACCEPTED_OR_REJECTED = "Your request is accepted or rejected";
         public const string NOT_FRIENDS = "You guys are not friends";
+
+        public const string INVALID_USER_ROLE = "User does not have permission to perform this action";
     }
 }

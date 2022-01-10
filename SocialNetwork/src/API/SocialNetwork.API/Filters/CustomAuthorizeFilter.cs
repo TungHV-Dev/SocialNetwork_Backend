@@ -3,7 +3,6 @@ using SocialNetwork.Common.Authorization;
 using SocialNetwork.Common.Constants;
 using SocialNetwork.Common.Models;
 using System;
-using System.Linq;
 using System.Security.Claims;
 
 namespace SocialNetwork.API.Filters

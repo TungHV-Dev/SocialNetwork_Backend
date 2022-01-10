@@ -54,7 +54,7 @@ namespace SocialNetwork.Repository.Implementations
             parameters.Add(SqlParameters.USER_EMAIL, request.Email, DbType.String);
             parameters.Add(SqlParameters.PASSWORD_HASH, request.PasswordHash, DbType.String);
             parameters.Add(SqlParameters.IS_PUBLIC_ACCOUNT, request.IsPublicAccount, DbType.Boolean);
-            parameters.Add(SqlParameters.ROLE, Roles.USER, DbType.String);
+            parameters.Add(SqlParameters.ROLE, Permission.USER, DbType.String);
 
             var procedureName = ProcedureNames.User.REGISTER_NEW_USER;
             var actionStatus = await _dbConnection.ExecuteScalarAsync<int>(procedureName, parameters, commandType: CommandType.StoredProcedure);
@@ -127,6 +127,42 @@ namespace SocialNetwork.Repository.Implementations
             var procedureName = ProcedureNames.User.GET_ALL_USER;
             var data = await _dbConnection.QueryAsync<GetUserDto>(procedureName, commandType: CommandType.StoredProcedure);
             return data;
+        }
+
+        public async Task<bool> AddUserAzureAD(AddUserAzureADDto userDto)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add(SqlParameters.USER_NAME, userDto.Username, DbType.String);
+            parameters.Add(SqlParameters.USER_EMAIL, userDto.Email, DbType.String);
+            parameters.Add(SqlParameters.ROLE, userDto.Role, DbType.String);
+            parameters.Add(SqlParameters.LAST_LOGIN_TIME, userDto.LastLoginTime, DbType.DateTime);
+
+            var procedureName = ProcedureNames.User.ADD_USER_AZURE_AD;
+            var actionStatus = await _dbConnection.ExecuteScalarAsync<int>(procedureName, parameters, commandType: CommandType.StoredProcedure);
+
+            return actionStatus switch
+            {
+                0 => true,
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
+            };
+        }
+
+        public async Task<FindUserAzureByUserName> FindUserAzureByUserName(string userName)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add(SqlParameters.USER_NAME, userName, DbType.String);
+            parameters.Add(SqlParameters.ACTION_STATUS, DbType.Int32, direction: ParameterDirection.Output);
+
+            var procedureName = ProcedureNames.User.FIND_USER_AZURE_BY_USER_NAME;
+            var response = await _dbConnection.QueryFirstAsync<FindUserAzureByUserName>(procedureName, parameters, commandType: CommandType.StoredProcedure);
+            var actionStatus = parameters.Get<int>(SqlParameters.ACTION_STATUS);
+
+            return actionStatus switch
+            {
+                0 => response,
+                -1 => throw new NotFoundException(ErrorMessages.INVALID_USER_NAME),
+                _ => throw new BadRequestException(ErrorMessages.SQL_EXCEPTION)
+            };
         }
         #endregion
     }

@@ -11,10 +11,12 @@ namespace SocialNetwork.Repository.Interfaces
     public interface IUserRepository
     {
         Task<FindUserByUserNameResponseDto> FindUserByUserName(string userName);
+        Task<FindUserAzureByUserName> FindUserAzureByUserName(string userName);
         Task<bool> RegisterNewUser(RegisterRequestDto request);
         Task<bool> ChangePassword(ChangePasswordRequestDto request);
         Task<IEnumerable<GetFriendOfUserResponse>> GetFriendsOfUser(Guid userID);
         Task<GetUserResponse> GetUserById(Guid userID);
         Task<IEnumerable<GetUserDto>> GetAllUser();
+        Task<bool> AddUserAzureAD(AddUserAzureADDto userDto);
     }
 }

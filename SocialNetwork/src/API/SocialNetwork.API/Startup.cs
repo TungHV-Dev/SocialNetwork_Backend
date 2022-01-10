@@ -1,4 +1,5 @@
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Web;
 using Newtonsoft.Json;
 using SocialNetwork.API.Configurations;
 using SocialNetwork.API.Filters;
@@ -59,7 +61,6 @@ namespace SocialNetwork.API
             // Add setting options
             services.Configure<JWTSetting>(Configuration.GetSection("JWTSetting"));
             services.Configure<PaginationSetting>(Configuration.GetSection("PaginationSetting"));
-            services.Configure<EmailSetting>(Configuration.GetSection("EmailSetting"));
 
             // Add AutoMapper
             services.AddAutoMapper(typeof(ModelMapping).Assembly);
@@ -72,10 +73,13 @@ namespace SocialNetwork.API
             services.RegisterModelValidation();
 
             // Add JWT Config
-            services.ConfigureJWT(Configuration);
+            //   services.ConfigureJWT(Configuration);
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
             // Add Swagger
-            services.ConfigureSwagger();
+            //  services.ConfigureSwagger();
+            services.ConfigureSwaggerAzureAD(Configuration);
 
             // Add Api Versioning
             services.ConfigureApiVersioning();
@@ -106,7 +110,11 @@ namespace SocialNetwork.API
                         description.GroupName.ToUpperInvariant());
                 }
 
-                s.RoutePrefix = "";
+               // s.RoutePrefix = "";
+
+                s.OAuthClientId(Configuration["AzureAD:ClientId"]);
+                s.OAuthClientSecret(Configuration["AzureAD:Secret"]);
+                s.OAuthUseBasicAuthenticationWithAccessCodeGrant();
             });
 
             app.UseEndpoints(endpoints =>
