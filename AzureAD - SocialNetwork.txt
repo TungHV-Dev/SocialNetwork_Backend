@@ -1,5 +1,0 @@
-ClientSecret: "3SZ7Q~GE0FwI881k5UQq~vva.JeWUfeZUUHNr"
-ClientID: "0cf69783-fa4c-4bed-bb78-dac004f7e9dd"
-TenantID: "06f1b89f-07e8-464f-b408-ec1b45703f31"
-ObjectID: "255e3276-bec4-4ca4-99c3-8754404bac82"
-RedirectUrl: "https://localhost:44356/index.html"
